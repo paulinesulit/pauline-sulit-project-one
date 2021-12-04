@@ -1,4 +1,32 @@
-$primary: palegreen;
-body {
-    background-color: palegreen;
+// variables
+$primary: #C3DAB7;
+$secondary: #F6F6F6;
+$textColor: #333;
+$whiteText: #fff;
+$mainFont: 'Montserrat',
+sans-serif;
+$bodyFont: 'Open Sans',
+sans-serif;
+// imports
+@import "setup";
+@import "partials/nav";
+// mixin
+@mixin myFont($size, $colour, $fontWeight) {
+    font-size: $size;
+    color: $colour;
+    font-weight: $fontWeight;
+}
+
+@mixin position($type, $top, $left) {
+    position: $type;
+    top: $top;
+    left: $left;
+}
+
+// with selectors
+html {
+    font-family: $mainFont;
+    font-weight: 400;
+    font-size: 125%;
+    color: $textColor;
 }
