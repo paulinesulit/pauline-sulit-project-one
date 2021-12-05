@@ -349,6 +349,11 @@ ul {
   list-style-type: none;
 }
 
+header {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
 .headerNav {
   width: 100%;
   display: -webkit-box;
@@ -417,4 +422,10 @@ input[placeholder="Enter your email"],
 label[for=email] {
   font-family: "Open Sans", sans-serif;
   font-size: 0.7rem;
+}
+
+header {
+  background-image: url("./../assets/blog-1.jpeg");
+  background-size: cover;
+  height: 80vh;
 }

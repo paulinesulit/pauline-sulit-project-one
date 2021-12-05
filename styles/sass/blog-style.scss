@@ -3,3 +3,9 @@
 @import "partials/typography-general";
 @import "partials/nav";
 @import "partials/footer";
+// header
+header {
+    background-image: url("./../assets/blog-1.jpeg");
+    background-size: cover;
+    height: 80vh;
+}
