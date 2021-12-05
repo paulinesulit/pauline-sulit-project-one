@@ -1,90 +1,10 @@
-// variables
-$primary: #C3DAB7;
-$secondary: #F6F6F6;
-$textColor: #333;
-$whiteText: #fff;
-$mainFont: 'Montserrat',
-sans-serif;
-$bodyFont: 'Open Sans',
-sans-serif;
 // imports
-@import "setup";
+@import "partials/setup";
+@import "partials/variables";
+@import "partials/typography-general";
 @import "partials/nav";
 @import "partials/footer";
-// mixin
-@mixin myFont($size, $letterSpacing, $fontWeight) {
-    font-size: $size;
-    letter-spacing: $letterSpacing;
-    font-weight: $fontWeight;
-}
-
-@mixin flexBox($display, $justifyContent) {
-    display: $display;
-    justify-content: $justifyContent;
-}
-
-@mixin position($type, $top, $left) {
-    position: $type;
-    top: $top;
-    left: $left;
-}
-
-// with selectors
-// typography
-html {
-    @include myFont(125%, 0.3px, 400);
-    font-family: $mainFont;
-    color: $textColor;
-}
-
-h1 {
-    @include myFont(1.85rem, 0.9px, 700);
-    text-align: center;
-}
-
-a {
-    @include myFont(0.7rem, 0.3px, 400);
-    color: $textColor;
-}
-
-h2 {
-    @include myFont(1rem, 1.8px, 400)
-}
-
-p {
-    @include myFont(0.7rem, 0.3px, 400);
-    text-align: center;
-    line-height: 24px;
-    font-family: $bodyFont;
-}
-
-h3 {
-    @include myFont(0.7rem, 0.3px, 400);
-    text-align: center;
-    line-height: 24px;
-}
-
-button {
-    @include myFont(0.7rem, 0.7px, 700);
-    text-align: center;
-    line-height: 24px;
-}
-
-// general styles
-img {
-    max-width: 100%;
-    display: block;
-}
-
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-ul {
-    list-style-type: none;
-}
-
+@import "partials/mixin";
 // header
 header {
     padding-left: 150px;

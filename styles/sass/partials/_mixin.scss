@@ -1,0 +1,16 @@
+@mixin myFont($size, $letterSpacing, $fontWeight) {
+    font-size: $size;
+    letter-spacing: $letterSpacing;
+    font-weight: $fontWeight;
+}
+
+@mixin flexBox($display, $justifyContent) {
+    display: $display;
+    justify-content: $justifyContent;
+}
+
+@mixin position($type, $top, $left) {
+    position: $type;
+    top: $top;
+    left: $left;
+}
