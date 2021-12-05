@@ -281,7 +281,6 @@ ul {
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: #F6F6F6;
 }
 .headerNav ul {
   display: flex;
@@ -402,4 +401,12 @@ img {
 
 ul {
   list-style-type: none;
+}
+
+header {
+  padding-left: 150px;
+  padding-right: 150px;
+  background-image: url("../../assets/home-1.jpeg");
+  background-size: cover;
+  height: 90vh;
 }/*# sourceMappingURL=style.css.map */

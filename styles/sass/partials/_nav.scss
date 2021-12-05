@@ -1,13 +1,7 @@
-@mixin flexBox($display, $justifyContent) {
-    display: $display;
-    justify-content: $justifyContent;
-}
-
 .headerNav {
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: $secondary;
     ul {
         display: flex;
         justify-content: space-between;
