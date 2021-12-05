@@ -10,10 +10,11 @@ sans-serif;
 // imports
 @import "setup";
 @import "partials/nav";
+@import "partials/footer";
 // mixin
-@mixin myFont($size, $colour, $fontWeight) {
+@mixin myFont($size, $letterSpacing, $fontWeight) {
     font-size: $size;
-    color: $colour;
+    letter-spacing: $letterSpacing;
     font-weight: $fontWeight;
 }
 
@@ -24,9 +25,44 @@ sans-serif;
 }
 
 // with selectors
+// typography
 html {
+    @include myFont(125%, 0.3px, 400);
     font-family: $mainFont;
-    font-weight: 400;
-    font-size: 125%;
     color: $textColor;
 }
+
+h1 {
+    @include myFont(1.85rem, 0.9px, 700);
+    text-align: center;
+}
+
+a {
+    @include myFont(0.7rem, 0.3px, 400);
+    color: $textColor;
+}
+
+h2 {
+    @include myFont(1rem, 1.8px, 400)
+}
+
+p {
+    @include myFont(0.7rem, 0.3px, 400);
+    text-align: center;
+    line-height: 24px;
+    font-family: $bodyFont;
+}
+
+h3 {
+    @include myFont(0.7rem, 0.3px, 400);
+    text-align: center;
+    line-height: 24px;
+}
+
+button {
+    @include myFont(0.7rem, 0.7px, 700);
+    text-align: center;
+    line-height: 24px;
+}
+
+// general styles

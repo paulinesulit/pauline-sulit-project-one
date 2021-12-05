@@ -1,0 +1,19 @@
+footer {
+    background-color: $textColor;
+    color: $secondary;
+}
+
+li {
+    font-size: 0.7rem;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 24px;
+    font-family: $bodyFont;
+}
+
+input[placeholder="Enter your email"],
+label[for="email"] {
+    font-family: $bodyFont;
+    font-size: 0.7rem;
+}
