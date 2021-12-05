@@ -312,14 +312,17 @@ ul {
 .headerNav ul li a span {
   text-decoration: line-through;
 }
-.headerNav ul li p {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding: 0 8px;
+.headerNav ul li a .fa-shopping-bag::after {
+  content: "2";
   background: #C3DAB7;
   border-radius: 50%;
+  position: absolute;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
   font-size: 0.5rem;
+  top: 50%;
+  left: 50%;
+  padding: 4px 5px;
 }
 .headerNav h1 {
   padding: 30px;
