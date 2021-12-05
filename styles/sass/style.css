@@ -271,17 +271,50 @@ h3,
 h4,
 h5,
 h6,
-p {
+p,
+ul {
   margin: 0;
   padding: 0;
 }
 
-li {
-  list-style-type: none;
+.headerNav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #F6F6F6;
 }
-
-a {
+.headerNav ul {
+  display: flex;
+  justify-content: space-between;
+}
+.headerNav ul li {
+  position: relative;
+  padding: 20px;
+}
+.headerNav ul li a {
   text-decoration: none;
+}
+.headerNav ul li a i {
+  font-size: 1rem;
+}
+.headerNav ul li a span {
+  text-decoration: line-through;
+}
+.headerNav ul li p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0 8px;
+  background: #C3DAB7;
+  border-radius: 50%;
+  font-size: 0.5rem;
+}
+.headerNav h1 {
+  padding: 30px;
+  width: calc(100% /3);
+}
+.headerNav nav {
+  width: calc(100% / 3);
 }
 
 footer {
@@ -355,4 +388,18 @@ button {
   font-weight: 700;
   text-align: center;
   line-height: 24px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
 }/*# sourceMappingURL=style.css.map */

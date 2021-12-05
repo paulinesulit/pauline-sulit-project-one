@@ -18,6 +18,11 @@ sans-serif;
     font-weight: $fontWeight;
 }
 
+@mixin flexBox($display, $justifyContent) {
+    display: $display;
+    justify-content: $justifyContent;
+}
+
 @mixin position($type, $top, $left) {
     position: $type;
     top: $top;
@@ -66,3 +71,16 @@ button {
 }
 
 // general styles
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style-type: none;
+}

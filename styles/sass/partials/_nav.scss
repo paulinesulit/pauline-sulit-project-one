@@ -1,7 +1,44 @@
-li {
-    list-style-type: none;
+@mixin flexBox($display, $justifyContent) {
+    display: $display;
+    justify-content: $justifyContent;
 }
 
-a {
-    text-decoration: none;
+.headerNav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: $secondary;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+            position: relative;
+            padding: 20px;
+            a {
+                text-decoration: none;
+                i {
+                    font-size: 1rem;
+                }
+                span {
+                    text-decoration: line-through;
+                }
+            }
+            p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                padding: 0 8px;
+                background: $primary;
+                border-radius: 50%;
+                font-size: 0.5rem;
+            }
+        }
+    }
+    h1 {
+        padding: 30px;
+        width: calc(100% /3);
+    }
+    nav {
+        width: calc(100% / 3);
+    }
 }
