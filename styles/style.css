@@ -448,21 +448,28 @@ footer .footerInfo li {
   line-height: 24px;
   font-family: "Open Sans", sans-serif;
 }
-footer .footerInfo input[placeholder="Enter your email"] {
+footer .footerInfo form {
+  position: relative;
+}
+footer .footerInfo form input[placeholder="Enter your email"] {
   font-family: "Open Sans", sans-serif;
   font-size: 0.7rem;
-  margin: 30px 0 0 20px;
-  padding: 10px;
+  padding: 12px;
+  margin-top: 30px;
+  margin-left: 20px;
+  border: transparent;
 }
-footer .footerInfo label[for=email] {
+footer .footerInfo form label[for=email] {
   font-family: "Open Sans", sans-serif;
   font-size: 0.7rem;
   display: block;
 }
-footer .footerInfo button {
+footer .footerInfo form button {
   border: transparent;
-  padding: 10px;
+  padding: 10px 12px 10px 12px;
   background: #C3DAB7;
+  position: absolute;
+  bottom: 0;
 }
 footer p {
   border-top: 1px solid #F6F6F6;
