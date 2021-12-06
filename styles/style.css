@@ -427,7 +427,11 @@ label[for=email] {
 header {
   background-image: url("./../assets/home-1.jpeg");
   background-size: cover;
-  height: 90vh;
+  height: 80vh;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
 }
 
 .branding {
@@ -504,4 +508,88 @@ header {
   background-image: url("./../assets/home-4.jpeg");
   background-size: cover;
   height: 90vh;
+}
+.shop .shopContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5% 5% 10% 50%;
+}
+.shop .shopContainer li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px;
+}
+.shop .shopContainer li i {
+  border: solid 1px #333;
+  border-radius: 50%;
+  padding: 10px;
+  margin: 15px;
+  font-size: 1rem;
+}
+.shop .shopContainer li .fa-map-pin {
+  padding: 10px 13.13px;
+}
+.shop .shopContainer li h3,
+.shop .shopContainer li p {
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+.teamContainer {
+  padding: 0 100px 100px 100px;
+}
+.teamContainer::before {
+  content: "";
+  width: 50%;
+  height: 50px;
+  border-right: solid 1px #333;
+  display: block;
+}
+.teamContainer h2 {
+  padding: 50px;
+  text-align: center;
+}
+.teamContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.teamContainer ul li {
+  padding: 10px;
+  width: calc((100% / 4) - 20px);
+}
+.teamContainer ul li:last-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px;
+}
+.teamContainer ul li:first-of-type {
+  padding: 20px;
+  width: calc((100% / 2) - 40px);
+  background: #F6F6F6;
+}
+.teamContainer ul li:first-of-type h3,
+.teamContainer ul li:first-of-type p {
+  text-align: left;
+  padding: 10px;
+}
+.teamContainer ul li:first-of-type h3 {
+  padding-top: 50px;
 }
