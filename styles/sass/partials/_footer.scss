@@ -1,19 +1,54 @@
 footer {
     background-color: $textColor;
     color: $secondary;
-}
-
-li {
-    font-size: 0.7rem;
-    letter-spacing: 0.3px;
-    font-weight: 400;
-    text-align: center;
-    line-height: 24px;
-    font-family: $bodyFont;
-}
-
-input[placeholder="Enter your email"],
-label[for="email"] {
-    font-family: $bodyFont;
-    font-size: 0.7rem;
+    .footerInfo {
+        @include flexBox(flex, center);
+        padding: 80px;
+        div {
+            padding: 20px;
+            &:first-of-type h3 {
+                text-align: left;
+            }
+            h3 {
+                padding-bottom: 30px;
+            }
+        }
+        .socialIcons {
+            padding: 20px 0 0 0;
+            ul {
+                @include flexBox(flex, space-between);
+                width: 30%;
+            }
+        }
+        .posts li {
+            list-style-type: disc;
+        }
+        li {
+            @include myFont(0.7rem, 0.3px, 400);
+            line-height: 24px;
+            font-family: $bodyFont;
+        }
+        input[placeholder="Enter your email"] {
+            font-family: $bodyFont;
+            font-size: 0.7rem;
+            margin: 30px 0 0 20px;
+            padding: 10px;
+        }
+        label[for="email"] {
+            font-family: $bodyFont;
+            font-size: 0.7rem;
+            display: block;
+        }
+        button {
+            border: transparent;
+            padding: 10px;
+            background: $primary;
+        }
+    }
+    p {
+        border-top: 1px solid $secondary;
+        padding: 50px;
+        font-family: $mainFont;
+        letter-spacing: 5px;
+    }
 }

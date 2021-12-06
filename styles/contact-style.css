@@ -408,18 +408,65 @@ footer {
   background-color: #333;
   color: #F6F6F6;
 }
-
-li {
+footer .footerInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 80px;
+}
+footer .footerInfo div {
+  padding: 20px;
+}
+footer .footerInfo div:first-of-type h3 {
+  text-align: left;
+}
+footer .footerInfo div h3 {
+  padding-bottom: 30px;
+}
+footer .footerInfo .socialIcons {
+  padding: 20px 0 0 0;
+}
+footer .footerInfo .socialIcons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30%;
+}
+footer .footerInfo .posts li {
+  list-style-type: disc;
+}
+footer .footerInfo li {
   font-size: 0.7rem;
   letter-spacing: 0.3px;
   font-weight: 400;
-  text-align: center;
   line-height: 24px;
   font-family: "Open Sans", sans-serif;
 }
-
-input[placeholder="Enter your email"],
-label[for=email] {
+footer .footerInfo input[placeholder="Enter your email"] {
   font-family: "Open Sans", sans-serif;
   font-size: 0.7rem;
+  margin: 30px 0 0 20px;
+  padding: 10px;
+}
+footer .footerInfo label[for=email] {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.7rem;
+  display: block;
+}
+footer .footerInfo button {
+  border: transparent;
+  padding: 10px;
+  background: #C3DAB7;
+}
+footer p {
+  border-top: 1px solid #F6F6F6;
+  padding: 50px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
 }
