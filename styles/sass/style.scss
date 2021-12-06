@@ -76,7 +76,7 @@ h3 {
     height: 90vh;
     .shopContainer {
         display: flex;
-        padding: 5% 5% 10% 50%;
+        padding: 80px 50px 20px 500px;
         li {
             @include flexBox(flex,
             flex-start);
@@ -102,7 +102,7 @@ h3 {
 
 // fourth section
 .teamContainer {
-    padding: 0 100px 100px 100px;
+    padding: 0 100px 150px 100px;
     &::before {
         content: "";
         width: 50%;
@@ -139,6 +139,31 @@ h3 {
                 h3 {
                     padding-top: 50px;
                 }
+            }
+        }
+    }
+}
+
+// fifth section
+.portfolioContainer {
+    @include flexBox(flex,
+    center);
+    div {
+        width: calc(100% / 2);
+        background-color: $primary;
+        &:first-of-type {
+            @include flexBox(flex,
+            center);
+            flex-direction: column;
+            padding: 80px;
+            align-items: center;
+            p {
+                padding: 40px;
+            }
+            button {
+                padding: 10px 20px;
+                border: transparent;
+                font-family: $mainFont;
             }
         }
     }
