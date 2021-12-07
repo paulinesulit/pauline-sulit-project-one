@@ -107,7 +107,7 @@ h3 {
         content: "";
         width: 50%;
         height: 50px;
-        border-right: solid 1px $textColor;
+        border-right: solid 1px rgb(51, 51, 51, 0.2);
         display: block;
     }
     h2 {
@@ -128,8 +128,9 @@ h3 {
                 padding: 40px;
             }
             &:first-of-type {
-                padding: 20px;
-                width: calc((100% / 2) - 40px);
+                padding: 10px 10px 0 10px;
+                margin: 10px;
+                width: calc((100% / 2) - 60px);
                 background: $secondary;
                 h3,
                 p {

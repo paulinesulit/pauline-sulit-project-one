@@ -40,6 +40,11 @@ button {
 }
 
 // general
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 img {
     max-width: 100%;
     display: block;
