@@ -427,10 +427,10 @@ footer .footerInfo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 80px;
+  padding: 80px 50px;
 }
 footer .footerInfo div {
-  padding: 20px;
+  padding: 40px;
 }
 footer .footerInfo div:first-of-type h3 {
   text-align: left;
@@ -576,7 +576,7 @@ h3 {
 .shop {
   background-image: url("./../assets/home-4.jpeg");
   background-size: cover;
-  height: 90vh;
+  height: 80vh;
 }
 .shop .shopContainer {
   display: -webkit-box;

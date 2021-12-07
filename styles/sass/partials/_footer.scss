@@ -3,9 +3,9 @@ footer {
     color: $secondary;
     .footerInfo {
         @include flexBox(flex, center);
-        padding: 80px;
+        padding: 80px 50px;
         div {
-            padding: 20px;
+            padding: 40px;
             &:first-of-type h3 {
                 text-align: left;
             }
