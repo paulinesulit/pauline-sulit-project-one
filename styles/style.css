@@ -310,13 +310,20 @@ h2 {
   font-weight: 400;
 }
 
-p {
+p,
+input[placeholder],
+textarea[placeholder] {
   font-size: 0.7rem;
   letter-spacing: 0.3px;
   font-weight: 400;
   text-align: center;
   line-height: 24px;
   font-family: "Open Sans", sans-serif;
+}
+
+input[placeholder],
+textarea[placeholder] {
+  text-align: left;
 }
 
 h3 {
@@ -459,10 +466,13 @@ footer .footerInfo form {
 footer .footerInfo form input[placeholder="Enter your email"] {
   font-family: "Open Sans", sans-serif;
   font-size: 0.7rem;
-  padding: 12px;
+  padding: 10px 12px;
   margin-top: 30px;
   margin-left: 20px;
   border: transparent;
+}
+footer .footerInfo form input[type=email]:hover, footer .footerInfo form input[type=email]:active, footer .footerInfo form input[type=email]:focus {
+  outline: none;
 }
 footer .footerInfo form label[for=email] {
   font-family: "Open Sans", sans-serif;

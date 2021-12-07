@@ -33,10 +33,17 @@ footer {
             input[placeholder="Enter your email"] {
                 font-family: $bodyFont;
                 font-size: 0.7rem;
-                padding: 12px;
+                padding: 10px 12px;
                 margin-top: 30px;
                 margin-left: 20px;
                 border: transparent;
+            }
+            input[type="email"] {
+                &:hover,
+                &:active,
+                &:focus {
+                    outline: none;
+                }
             }
             label[for="email"] {
                 font-family: $bodyFont;

@@ -310,13 +310,20 @@ h2 {
   font-weight: 400;
 }
 
-p {
+p,
+input[placeholder],
+textarea[placeholder] {
   font-size: 0.7rem;
   letter-spacing: 0.3px;
   font-weight: 400;
   text-align: center;
   line-height: 24px;
   font-family: "Open Sans", sans-serif;
+}
+
+input[placeholder],
+textarea[placeholder] {
+  text-align: left;
 }
 
 h3 {
@@ -459,10 +466,13 @@ footer .footerInfo form {
 footer .footerInfo form input[placeholder="Enter your email"] {
   font-family: "Open Sans", sans-serif;
   font-size: 0.7rem;
-  padding: 12px;
+  padding: 10px 12px;
   margin-top: 30px;
   margin-left: 20px;
   border: transparent;
+}
+footer .footerInfo form input[type=email]:hover, footer .footerInfo form input[type=email]:active, footer .footerInfo form input[type=email]:focus {
+  outline: none;
 }
 footer .footerInfo form label[for=email] {
   font-family: "Open Sans", sans-serif;
@@ -489,9 +499,16 @@ header {
   height: 65vh;
 }
 
-.blogContainer {
-  padding-bottom: 70px;
+.wrapper {
+  padding-bottom: 50px;
 }
+.wrapper h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+}
+
 .blogContainer .blogTitle {
   margin-top: 70px;
 }
@@ -566,15 +583,6 @@ header {
   font-size: 0.8rem;
 }
 
-.relatedPostsContainer {
-  padding-bottom: 50px;
-}
-.relatedPostsContainer h2 {
-  font-weight: bold;
-  font-size: 1.5rem;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
-}
 .relatedPostsContainer ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -589,15 +597,6 @@ header {
   padding-top: 20px;
 }
 
-.commentsContainer {
-  padding-bottom: 50px;
-}
-.commentsContainer h2 {
-  font-weight: bold;
-  font-size: 1.5rem;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
-}
 .commentsContainer .eachComment {
   padding-top: 50px;
   display: -webkit-box;
@@ -631,4 +630,47 @@ header {
   border-bottom: 8px solid transparent;
   left: 80px;
   bottom: 95px;
+}
+
+.contactContainer {
+  margin-bottom: 120px;
+}
+.contactContainer input[type=text],
+.contactContainer input[type=email],
+.contactContainer textarea {
+  border: transparent;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+}
+.contactContainer input[type=text],
+.contactContainer input[type=email] {
+  width: calc(100% / 3 - 18px);
+  padding: 10px 10px 10px 0;
+  margin-top: 50px;
+}
+.contactContainer input[type=text]:hover, .contactContainer input[type=text]:active, .contactContainer input[type=text]:focus,
+.contactContainer input[type=email]:hover,
+.contactContainer input[type=email]:active,
+.contactContainer input[type=email]:focus {
+  outline: none;
+  border-bottom: 1px solid #333;
+}
+.contactContainer input[type=email] {
+  margin: 0 20px;
+}
+.contactContainer textarea {
+  display: block;
+  width: 100%;
+  margin: 40px 0 50px 0;
+}
+.contactContainer textarea:hover, .contactContainer textarea:active, .contactContainer textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #333;
+}
+.contactContainer button {
+  border: transparent;
+  background: transparent;
+  padding-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  border-bottom: 1px solid #333;
 }

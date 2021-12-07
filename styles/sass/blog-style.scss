@@ -10,9 +10,19 @@ header {
     height: 65vh;
 }
 
+// sections general
+.wrapper {
+    padding-bottom: 50px;
+    h2 {
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgb(51, 51, 51, 0.2);
+    }
+}
+
 // first section
 .blogContainer {
-    padding-bottom: 70px;
     .blogTitle {
         margin-top: 70px;
         h1,
@@ -70,13 +80,6 @@ header {
 
 // second section
 .relatedPostsContainer {
-    padding-bottom: 50px;
-    h2 {
-        font-weight: bold;
-        font-size: 1.5rem;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgb(51, 51, 51, 0.2);
-    }
     ul {
         @include flexBox(flex,
         space-between);
@@ -90,13 +93,6 @@ header {
 
 // third section
 .commentsContainer {
-    padding-bottom: 50px;
-    h2 {
-        font-weight: bold;
-        font-size: 1.5rem;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgb(51, 51, 51, 0.2);
-    }
     .eachComment {
         padding-top: 50px;
         @include flexBox(flex,
@@ -126,5 +122,50 @@ header {
                 bottom: 95px;
             }
         }
+    }
+}
+
+// fourth section
+.contactContainer {
+    margin-bottom: 120px;
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        border: transparent;
+        border-bottom: 1px solid rgb(51, 51, 51, 0.2);
+    }
+    input[type="text"],
+    input[type="email"] {
+        width: calc(100% / 3 - 18px);
+        padding: 10px 10px 10px 0;
+        margin-top: 50px;
+        &:hover,
+        &:active,
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid $textColor;
+        }
+    }
+    input[type="email"] {
+        margin: 0 20px;
+    }
+    textarea {
+        display: block;
+        width: 100%;
+        margin: 40px 0 50px 0;
+        &:hover,
+        &:active,
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid $textColor;
+        }
+    }
+    button {
+        border: transparent;
+        background: transparent;
+        padding-bottom: 5px;
+        font-family: $mainFont;
+        font-weight: 400;
+        border-bottom: 1px solid $textColor;
     }
 }
