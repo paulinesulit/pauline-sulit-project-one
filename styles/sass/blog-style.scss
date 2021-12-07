@@ -7,5 +7,62 @@
 header {
     background-image: url("./../assets/blog-1.jpeg");
     background-size: cover;
-    height: 80vh;
+    height: 65vh;
+}
+
+// first section
+.blogContainer {
+    .blogTitle {
+        margin-top: 70px;
+        h1,
+        p {
+            text-align: left;
+            padding: 10px 0;
+        }
+    }
+    .blogInfoContainer {
+        @include flexBox(flex,
+        flex-start);
+        padding: 30px 0;
+        border-bottom: 1px solid rgb(51, 51, 51, 0.2);
+        margin: 50px 0;
+        .author {
+            @include flexBox(flex,
+            flex-start);
+            width: 50%;
+            align-items: center;
+            img {
+                border-radius: 50%;
+                padding-right: 20px;
+            }
+        }
+        .blogInfo {
+            @include flexBox(flex,
+            space-between);
+            width: 50%;
+            align-items: center;
+        }
+        h3,
+        p {
+            text-align: left;
+        }
+    }
+    .blogWriting {
+        p {
+            text-align: left;
+            padding: 10px 0;
+            &:first-of-type {
+                font-weight: bold;
+            }
+        }
+        .socials {
+            @include flexBox(flex,
+            flex-start);
+            align-items: center;
+            i {
+                padding: 10px;
+                font-size: 0.8rem;
+            }
+        }
+    }
 }
