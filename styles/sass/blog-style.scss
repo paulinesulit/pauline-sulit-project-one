@@ -12,6 +12,7 @@ header {
 
 // first section
 .blogContainer {
+    padding-bottom: 70px;
     .blogTitle {
         margin-top: 70px;
         h1,
@@ -62,6 +63,67 @@ header {
             i {
                 padding: 10px;
                 font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+// second section
+.relatedPostsContainer {
+    padding-bottom: 50px;
+    h2 {
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgb(51, 51, 51, 0.2);
+    }
+    ul {
+        @include flexBox(flex,
+        space-between);
+        padding: 50px 0;
+        p {
+            text-align: left;
+            padding-top: 20px;
+        }
+    }
+}
+
+// third section
+.commentsContainer {
+    padding-bottom: 50px;
+    h2 {
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgb(51, 51, 51, 0.2);
+    }
+    .eachComment {
+        padding-top: 50px;
+        @include flexBox(flex,
+        flex-start);
+        position: relative;
+        .imageContainer {
+            padding: 0 50px 50px 0;
+            width: 10%;
+        }
+        .textComment {
+            background: $secondary;
+            padding: 20px;
+            width: 90%;
+            h3,
+            p {
+                text-align: left;
+                padding: 3px;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                border-top: 8px solid transparent;
+                border-left: 20px solid transparent;
+                border-right: 20px solid $secondary;
+                border-bottom: 8px solid transparent;
+                left: 80px;
+                bottom: 95px;
             }
         }
     }

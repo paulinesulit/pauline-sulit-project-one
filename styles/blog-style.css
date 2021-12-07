@@ -489,6 +489,9 @@ header {
   height: 65vh;
 }
 
+.blogContainer {
+  padding-bottom: 70px;
+}
 .blogContainer .blogTitle {
   margin-top: 70px;
 }
@@ -561,4 +564,71 @@ header {
 .blogContainer .blogWriting .socials i {
   padding: 10px;
   font-size: 0.8rem;
+}
+
+.relatedPostsContainer {
+  padding-bottom: 50px;
+}
+.relatedPostsContainer h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+}
+.relatedPostsContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 0;
+}
+.relatedPostsContainer ul p {
+  text-align: left;
+  padding-top: 20px;
+}
+
+.commentsContainer {
+  padding-bottom: 50px;
+}
+.commentsContainer h2 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+}
+.commentsContainer .eachComment {
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+}
+.commentsContainer .eachComment .imageContainer {
+  padding: 0 50px 50px 0;
+  width: 10%;
+}
+.commentsContainer .eachComment .textComment {
+  background: #F6F6F6;
+  padding: 20px;
+  width: 90%;
+}
+.commentsContainer .eachComment .textComment h3,
+.commentsContainer .eachComment .textComment p {
+  text-align: left;
+  padding: 3px;
+}
+.commentsContainer .eachComment .textComment:after {
+  content: "";
+  position: absolute;
+  border-top: 8px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid #F6F6F6;
+  border-bottom: 8px solid transparent;
+  left: 80px;
+  bottom: 95px;
 }
