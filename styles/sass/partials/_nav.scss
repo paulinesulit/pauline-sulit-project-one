@@ -2,14 +2,37 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     ul {
         display: flex;
         justify-content: space-between;
         li {
             position: relative;
             padding: 20px;
+            @media (max-width: 1080px) {
+                padding: 10px;
+            }
+            @media (max-width: 970px) {
+                visibility: hidden;
+            }
             a {
                 text-decoration: none;
+                position: relative;
+                .fa-bars {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font-size: 2rem;
+                    visibility: hidden;
+                    @media (max-width: 970px) {
+                        visibility: visible;
+                        top: 10px;
+                    }
+                    @media (max-width: 610px) {
+                        right: 20px;
+                        // FIX THIS !!!!!! NOT RESPONSE
+                    }
+                }
                 i {
                     font-size: 1rem;
                 }
@@ -34,8 +57,27 @@
     h1 {
         padding: 30px;
         width: calc(100% /3);
+        @media (max-width: 1080px) {
+            padding: 50px 0;
+        }
+        @media (max-width: 970px) {
+            position: absolute;
+            margin-top: 100px;
+            font-size: 3rem;
+            left: 90px;
+        }
     }
     nav {
-        width: calc(100% / 3);
+        width: calc(100% / 4);
+        &:first-of-type {
+            width: calc(100% / 3);
+        }
     }
 }
+
+// media queries
+@media (max-width: 740px) {}
+
+@media (max-width: 610px) {}
+
+@media (max-width: 450px) {}
