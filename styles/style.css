@@ -353,6 +353,7 @@ img {
 }
 
 .wrapper {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -404,31 +405,10 @@ header {
   text-decoration: none;
   position: relative;
 }
-.headerNav ul li a .fa-bars {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 2rem;
-  visibility: hidden;
-}
-@media (max-width: 970px) {
-  .headerNav ul li a .fa-bars {
-    visibility: visible;
-    top: 10px;
-  }
-}
-@media (max-width: 610px) {
-  .headerNav ul li a .fa-bars {
-    right: 20px;
-  }
-}
-.headerNav ul li a i {
+.headerNav ul li i {
   font-size: 1rem;
 }
-.headerNav ul li a span {
-  text-decoration: line-through;
-}
-.headerNav ul li a .fa-shopping-bag::after {
+.headerNav ul li .fa-shopping-bag::after {
   content: "2";
   background: #C3DAB7;
   border-radius: 50%;
@@ -440,33 +420,52 @@ header {
   left: 50%;
   padding: 4px 5px;
 }
-.headerNav h1 {
+.headerNav .leftNav li:first-of-type a {
+  text-decoration: line-through;
+}
+
+h1 {
   padding: 30px;
   width: calc(100% /3);
 }
 @media (max-width: 1080px) {
-  .headerNav h1 {
+  h1 {
     padding: 50px 0;
   }
 }
 @media (max-width: 970px) {
-  .headerNav h1 {
+  h1 {
     position: absolute;
-    margin-top: 100px;
+    margin-top: 120px;
     font-size: 3rem;
     left: 90px;
   }
 }
 @media (max-width: 550px) {
-  .headerNav h1 {
-    left: 10px;
+  h1 {
+    margin-top: 140px;
+    left: 20px;
   }
 }
-.headerNav nav {
+
+nav {
   width: calc(100% / 4);
 }
-.headerNav nav:first-of-type {
+nav:first-of-type {
   width: calc(100% / 3);
+}
+nav .fa-bars {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  visibility: hidden;
+}
+@media (max-width: 970px) {
+  nav .fa-bars {
+    visibility: visible;
+    top: 10px;
+  }
 }
 
 footer {
@@ -735,21 +734,33 @@ h3 {
   background-size: cover;
   height: 80vh;
 }
+@media (max-width: 1000px) {
+  .shop {
+    background-color: rgba(255, 255, 255, 0.6);
+    background-blend-mode: lighten;
+  }
+}
 .shop .shopContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 80px 50px 20px 500px;
+  padding: 80px 40px 20px 450px;
 }
 @media (max-width: 1000px) {
   .shop .shopContainer {
     padding: 50px;
-    background-color: rgba(246, 246, 246, 0.6);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 830px) {
   .shop .shopContainer {
-    padding: 5px;
+    padding: 10px;
   }
 }
 .shop .shopContainer li {
@@ -782,7 +793,7 @@ h3 {
     font-size: 0.6rem;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 430px) {
   .shop .shopContainer li h3,
 .shop .shopContainer li p {
     line-height: 1.2;

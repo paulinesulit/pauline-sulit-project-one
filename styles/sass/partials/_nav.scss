@@ -18,69 +18,65 @@
             a {
                 text-decoration: none;
                 position: relative;
-                .fa-bars {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    font-size: 2rem;
-                    visibility: hidden;
-                    @media (max-width: 970px) {
-                        visibility: visible;
-                        top: 10px;
-                    }
-                    @media (max-width: 610px) {
-                        right: 20px;
-                        // FIX THIS !!!!!! NOT RESPONSE
-                    }
-                }
-                i {
-                    font-size: 1rem;
-                }
-                span {
-                    text-decoration: line-through;
-                }
-                .fa-shopping-bag::after {
-                    content: "2";
-                    background: $primary;
-                    border-radius: 50%;
-                    position: absolute;
-                    font-family: $bodyFont;
-                    font-weight: 400;
-                    font-size: 0.5rem;
-                    top: 50%;
-                    left: 50%;
-                    padding: 4px 5px;
-                }
+            }
+            i {
+                font-size: 1rem;
+            }
+            .fa-shopping-bag::after {
+                content: "2";
+                background: $primary;
+                border-radius: 50%;
+                position: absolute;
+                font-family: $bodyFont;
+                font-weight: 400;
+                font-size: 0.5rem;
+                top: 50%;
+                left: 50%;
+                padding: 4px 5px;
             }
         }
     }
-    h1 {
-        padding: 30px;
-        width: calc(100% /3);
-        @media (max-width: 1080px) {
-            padding: 50px 0;
-        }
-        @media (max-width: 970px) {
-            position: absolute;
-            margin-top: 100px;
-            font-size: 3rem;
-            left: 90px;
-        }
-        @media (max-width: 550px) {
-            left: 10px;
-        }
-    }
-    nav {
-        width: calc(100% / 4);
-        &:first-of-type {
-            width: calc(100% / 3);
+    .leftNav {
+        li:first-of-type {
+            a {
+                text-decoration: line-through;
+            }
         }
     }
 }
 
-// media queries
-@media (max-width: 740px) {}
+h1 {
+    padding: 30px;
+    width: calc(100% /3);
+    @media (max-width: 1080px) {
+        padding: 50px 0;
+    }
+    @media (max-width: 970px) {
+        position: absolute;
+        margin-top: 120px;
+        font-size: 3rem;
+        left: 90px;
+    }
+    @media (max-width: 550px) {
+        margin-top: 140px;
+        left: 20px;
+    }
+}
 
-@media (max-width: 610px) {}
-
-@media (max-width: 450px) {}
+nav {
+    width: calc(100% / 4);
+    &:first-of-type {
+        width: calc(100% / 3);
+    }
+    .fa-bars {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 2rem;
+        visibility: hidden;
+        @media (max-width: 970px) {
+            visibility: visible;
+            top: 10px;
+        }
+    }
+}
