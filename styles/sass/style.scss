@@ -10,12 +10,7 @@ header {
     background-image: url("./../assets/home-1.jpeg");
     background-size: cover;
     height: 70vh;
-    @media (max-width: 1080px) {
-        height: 60vh;
-    }
-    @media (max-width: 610px) {
-        height: 50vh;
-    }
+    background-position: 50% 50%;
 }
 
 h3 {
@@ -28,6 +23,10 @@ h3 {
     .brand {
         position: relative;
         padding: 200px 0 150px 0;
+        @media (max-width: 600px) {
+            padding-bottom: 50px;
+            padding-top: 100px;
+        }
         .brandingImages {
             @include flexBox(flex,
             center);
@@ -38,6 +37,8 @@ h3 {
             21%);
             @media (max-width: 600px) {
                 width: 30%;
+                top: 5%;
+                right: 10%;
             }
         }
         .brandingText {
@@ -55,6 +56,9 @@ h3 {
             @media (max-width: 680px) {
                 display: flex;
                 flex-direction: column;
+            }
+            @media (max-width: 550px) {
+                padding: 20px;
             }
         }
     }
@@ -105,6 +109,9 @@ h3 {
             padding: 50px;
             background-color: rgb(246, 246, 246, 0.6);
         }
+        @media (max-width: 550px) {
+            padding: 5px;
+        }
         li {
             @include flexBox(flex,
             flex-start);
@@ -126,6 +133,9 @@ h3 {
                 @media (max-width: 1000px) {
                     font-size: 0.6rem;
                 }
+                @media (max-width: 550px) {
+                    line-height: 1.2;
+                }
             }
         }
     }
@@ -134,6 +144,9 @@ h3 {
 // fourth section
 .teamContainer {
     padding: 0 100px 150px 100px;
+    @media (max-width: 550px) {
+        padding: 0 50px 50px 50px;
+    }
     &::before {
         content: "";
         width: 50%;
@@ -144,6 +157,9 @@ h3 {
     h2 {
         padding: 50px;
         text-align: center;
+        @media (max-width: 960px) {
+            padding: 20px;
+        }
     }
     ul {
         @include flexBox(flex,
@@ -154,6 +170,9 @@ h3 {
             width: calc((100% / 4) - 20px);
             @media (max-width: 960px) {
                 width: calc((100% / 2) - 20px);
+            }
+            @media (max-width: 550px) {
+                width: calc(100% - 20px);
             }
             &:last-of-type {
                 @include flexBox(flex,
@@ -169,6 +188,10 @@ h3 {
                 @media (max-width: 960px) {
                     width: calc(100% - 80px);
                     background: transparent;
+                }
+                @media (max-width: 550px) {
+                    width: calc(100% - 80px);
+                    padding: 0;
                 }
                 h3,
                 p {
@@ -186,6 +209,12 @@ h3 {
                     }
                 }
             }
+            img {
+                @media (max-width: 550px) {
+                    margin: 0 auto;
+                    padding: 0;
+                }
+            }
         }
     }
 }
@@ -194,12 +223,14 @@ h3 {
 .portfolioContainer {
     @include flexBox(flex,
     center);
+    @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+    }
     div {
         width: calc(100% / 2);
         background-color: $primary;
         @media (max-width: 600px) {
-            display: flex;
-            flex-wrap: wrap;
             width: 100%;
         }
         &:first-of-type {

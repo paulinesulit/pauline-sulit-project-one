@@ -4,13 +4,29 @@ footer {
     .footerInfo {
         @include flexBox(flex, center);
         padding: 80px 50px;
+        @media (max-width: 1000px) {
+            padding: 0;
+        }
+        @media (max-width: 960px) {
+            display: flex;
+            flex-direction: column;
+        }
         div {
             padding: 40px;
+            @media (max-width: 960px) {
+                padding: 20px;
+            }
             &:first-of-type h3 {
                 text-align: left;
+                @media (max-width: 960px) {
+                    text-align: center;
+                }
             }
             h3 {
                 padding-bottom: 30px;
+                @media (max-width: 960px) {
+                    padding-bottom: 10px;
+                }
             }
         }
         .socialIcons {
@@ -18,6 +34,10 @@ footer {
             ul {
                 @include flexBox(flex, space-between);
                 width: 30%;
+                @media (max-width: 960px) {
+                    width: 15%;
+                    margin: 0 auto;
+                }
             }
         }
         .posts li {
@@ -27,9 +47,15 @@ footer {
             @include myFont(0.7rem, 0.3px, 400);
             line-height: 24px;
             font-family: $bodyFont;
+            @media (max-width: 960px) {
+                text-align: center;
+            }
         }
         form {
             position: relative;
+            @media (max-width: 960px) {
+                text-align: center;
+            }
             input[placeholder="Enter your email"] {
                 font-family: $bodyFont;
                 font-size: 0.7rem;
@@ -37,6 +63,9 @@ footer {
                 margin-top: 30px;
                 margin-left: 20px;
                 border: transparent;
+                @media (max-width: 960px) {
+                    margin: 5px 0 0 0;
+                }
             }
             input[type="email"] {
                 &:hover,

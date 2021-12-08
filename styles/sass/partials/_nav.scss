@@ -66,6 +66,9 @@
             font-size: 3rem;
             left: 90px;
         }
+        @media (max-width: 550px) {
+            left: 10px;
+        }
     }
     nav {
         width: calc(100% / 4);

@@ -457,6 +457,11 @@ header {
     left: 90px;
   }
 }
+@media (max-width: 550px) {
+  .headerNav h1 {
+    left: 10px;
+  }
+}
 .headerNav nav {
   width: calc(100% / 4);
 }
@@ -477,14 +482,45 @@ footer .footerInfo {
           justify-content: center;
   padding: 80px 50px;
 }
+@media (max-width: 1000px) {
+  footer .footerInfo {
+    padding: 0;
+  }
+}
+@media (max-width: 960px) {
+  footer .footerInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 footer .footerInfo div {
   padding: 40px;
+}
+@media (max-width: 960px) {
+  footer .footerInfo div {
+    padding: 20px;
+  }
 }
 footer .footerInfo div:first-of-type h3 {
   text-align: left;
 }
+@media (max-width: 960px) {
+  footer .footerInfo div:first-of-type h3 {
+    text-align: center;
+  }
+}
 footer .footerInfo div h3 {
   padding-bottom: 30px;
+}
+@media (max-width: 960px) {
+  footer .footerInfo div h3 {
+    padding-bottom: 10px;
+  }
 }
 footer .footerInfo .socialIcons {
   padding: 20px 0 0 0;
@@ -498,6 +534,12 @@ footer .footerInfo .socialIcons ul {
           justify-content: space-between;
   width: 30%;
 }
+@media (max-width: 960px) {
+  footer .footerInfo .socialIcons ul {
+    width: 15%;
+    margin: 0 auto;
+  }
+}
 footer .footerInfo .posts li {
   list-style-type: disc;
 }
@@ -508,8 +550,18 @@ footer .footerInfo li {
   line-height: 24px;
   font-family: "Open Sans", sans-serif;
 }
+@media (max-width: 960px) {
+  footer .footerInfo li {
+    text-align: center;
+  }
+}
 footer .footerInfo form {
   position: relative;
+}
+@media (max-width: 960px) {
+  footer .footerInfo form {
+    text-align: center;
+  }
 }
 footer .footerInfo form input[placeholder="Enter your email"] {
   font-family: "Open Sans", sans-serif;
@@ -518,6 +570,11 @@ footer .footerInfo form input[placeholder="Enter your email"] {
   margin-top: 30px;
   margin-left: 20px;
   border: transparent;
+}
+@media (max-width: 960px) {
+  footer .footerInfo form input[placeholder="Enter your email"] {
+    margin: 5px 0 0 0;
+  }
 }
 footer .footerInfo form input[type=email]:hover, footer .footerInfo form input[type=email]:active, footer .footerInfo form input[type=email]:focus {
   outline: none;
@@ -545,16 +602,7 @@ header {
   background-image: url("./../assets/home-1.jpeg");
   background-size: cover;
   height: 70vh;
-}
-@media (max-width: 1080px) {
-  header {
-    height: 60vh;
-  }
-}
-@media (max-width: 610px) {
-  header {
-    height: 50vh;
-  }
+  background-position: 50% 50%;
 }
 
 h3 {
@@ -567,6 +615,12 @@ h3 {
 .branding .brand {
   position: relative;
   padding: 200px 0 150px 0;
+}
+@media (max-width: 600px) {
+  .branding .brand {
+    padding-bottom: 50px;
+    padding-top: 100px;
+  }
 }
 .branding .brand .brandingImages {
   display: -webkit-box;
@@ -584,6 +638,8 @@ h3 {
 @media (max-width: 600px) {
   .branding .brand .brandingImages img:first-of-type {
     width: 30%;
+    top: 5%;
+    right: 10%;
   }
 }
 .branding .brand .brandingText {
@@ -617,6 +673,11 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+@media (max-width: 550px) {
+  .branding .brand .brandingText {
+    padding: 20px;
   }
 }
 
@@ -686,6 +747,11 @@ h3 {
     background-color: rgba(246, 246, 246, 0.6);
   }
 }
+@media (max-width: 550px) {
+  .shop .shopContainer {
+    padding: 5px;
+  }
+}
 .shop .shopContainer li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -716,9 +782,20 @@ h3 {
     font-size: 0.6rem;
   }
 }
+@media (max-width: 550px) {
+  .shop .shopContainer li h3,
+.shop .shopContainer li p {
+    line-height: 1.2;
+  }
+}
 
 .teamContainer {
   padding: 0 100px 150px 100px;
+}
+@media (max-width: 550px) {
+  .teamContainer {
+    padding: 0 50px 50px 50px;
+  }
 }
 .teamContainer::before {
   content: "";
@@ -730,6 +807,11 @@ h3 {
 .teamContainer h2 {
   padding: 50px;
   text-align: center;
+}
+@media (max-width: 960px) {
+  .teamContainer h2 {
+    padding: 20px;
+  }
 }
 .teamContainer ul {
   display: -webkit-box;
@@ -748,6 +830,11 @@ h3 {
 @media (max-width: 960px) {
   .teamContainer ul li {
     width: calc((100% / 2) - 20px);
+  }
+}
+@media (max-width: 550px) {
+  .teamContainer ul li {
+    width: calc(100% - 20px);
   }
 }
 .teamContainer ul li:last-of-type {
@@ -774,6 +861,12 @@ h3 {
     background: transparent;
   }
 }
+@media (max-width: 550px) {
+  .teamContainer ul li:first-of-type {
+    width: calc(100% - 80px);
+    padding: 0;
+  }
+}
 .teamContainer ul li:first-of-type h3,
 .teamContainer ul li:first-of-type p {
   text-align: left;
@@ -794,6 +887,12 @@ h3 {
     padding-top: 10px;
   }
 }
+@media (max-width: 550px) {
+  .teamContainer ul li img {
+    margin: 0 auto;
+    padding: 0;
+  }
+}
 
 .portfolioContainer {
   display: -webkit-box;
@@ -803,17 +902,23 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (max-width: 600px) {
+  .portfolioContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .portfolioContainer div {
   width: calc(100% / 2);
   background-color: #C3DAB7;
 }
 @media (max-width: 600px) {
   .portfolioContainer div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     width: 100%;
   }
 }
