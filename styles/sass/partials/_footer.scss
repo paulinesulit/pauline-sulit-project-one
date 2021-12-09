@@ -56,6 +56,9 @@ footer {
             @media (max-width: 960px) {
                 text-align: center;
             }
+            @media (max-width: 460px) {
+                text-align: left;
+            }
             input[placeholder="Enter your email"] {
                 font-family: $bodyFont;
                 font-size: 0.7rem;
@@ -73,11 +76,17 @@ footer {
                 &:focus {
                     outline: none;
                 }
+                @media (max-width: 460px) {
+                    width: 90%
+                }
             }
             label[for="email"] {
                 font-family: $bodyFont;
                 font-size: 0.7rem;
                 display: block;
+                @media (max-width: 460px) {
+                    text-align: center;
+                }
             }
             button {
                 border: transparent;
@@ -85,6 +94,9 @@ footer {
                 background: $primary;
                 position: absolute;
                 bottom: 0;
+                @media (max-width: 460px) {
+                    width: 10%
+                }
             }
         }
     }

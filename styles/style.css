@@ -362,8 +362,14 @@ header {
   padding-right: 150px;
 }
 
+@media (max-width: 970px) {
+  header {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 .headerNav {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -400,6 +406,9 @@ header {
   text-decoration: none;
   position: relative;
 }
+.headerNav ul li a:hover {
+  font-weight: 700;
+}
 .headerNav ul li i {
   font-size: 1rem;
 }
@@ -430,19 +439,10 @@ h1 {
 }
 @media (max-width: 970px) {
   h1 {
-    position: absolute;
-    margin-top: 120px;
-    font-size: 3rem;
-    left: 70px;
+    width: 100%;
   }
 }
 
-nav {
-  width: calc(100% / 4);
-}
-nav:first-of-type {
-  width: calc(100% / 3);
-}
 nav .fa-bars {
   position: absolute;
   top: 10px;
@@ -551,6 +551,11 @@ footer .footerInfo form {
     text-align: center;
   }
 }
+@media (max-width: 460px) {
+  footer .footerInfo form {
+    text-align: left;
+  }
+}
 footer .footerInfo form input[placeholder="Enter your email"] {
   font-family: "Open Sans", sans-serif;
   font-size: 0.7rem;
@@ -567,10 +572,20 @@ footer .footerInfo form input[placeholder="Enter your email"] {
 footer .footerInfo form input[type=email]:hover, footer .footerInfo form input[type=email]:active, footer .footerInfo form input[type=email]:focus {
   outline: none;
 }
+@media (max-width: 460px) {
+  footer .footerInfo form input[type=email] {
+    width: 90%;
+  }
+}
 footer .footerInfo form label[for=email] {
   font-family: "Open Sans", sans-serif;
   font-size: 0.7rem;
   display: block;
+}
+@media (max-width: 460px) {
+  footer .footerInfo form label[for=email] {
+    text-align: center;
+  }
 }
 footer .footerInfo form button {
   border: transparent;
@@ -578,6 +593,11 @@ footer .footerInfo form button {
   background: #C3DAB7;
   position: absolute;
   bottom: 0;
+}
+@media (max-width: 460px) {
+  footer .footerInfo form button {
+    width: 10%;
+  }
 }
 footer p {
   border-top: 1px solid rgba(246, 246, 246, 0.2);
@@ -714,6 +734,9 @@ h3 {
 .imageScrollContainer .imageAndText p {
   font-style: italic;
 }
+.imageScrollContainer i {
+  font-size: 1rem;
+}
 .imageScrollContainer .fa-chevron-right {
   color: grey;
 }
@@ -723,7 +746,7 @@ h3 {
   background-size: cover;
   height: 80vh;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1080px) {
   .shop {
     background-color: rgba(255, 255, 255, 0.6);
     background-blend-mode: lighten;
@@ -733,11 +756,11 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 80px 40px 20px 450px;
+  padding: 90px 30px 20px 480px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1080px) {
   .shop .shopContainer {
-    padding: 50px;
+    padding: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -761,6 +784,11 @@ h3 {
           justify-content: flex-start;
   padding: 10px;
 }
+@media (max-width: 480px) {
+  .shop .shopContainer li {
+    padding: 5px;
+  }
+}
 .shop .shopContainer li i {
   border: solid 1px #333;
   border-radius: 50%;
@@ -776,16 +804,16 @@ h3 {
   text-align: left;
   padding-bottom: 5px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1080px) {
   .shop .shopContainer li h3,
 .shop .shopContainer li p {
     font-size: 0.6rem;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 420px) {
   .shop .shopContainer li h3,
 .shop .shopContainer li p {
-    line-height: 1.2;
+    line-height: 1;
   }
 }
 

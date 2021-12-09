@@ -92,6 +92,9 @@ h3 {
             font-style: italic;
         }
     }
+    i {
+        font-size: 1rem;
+    }
     .fa-chevron-right {
         color: grey;
     }
@@ -102,15 +105,15 @@ h3 {
     background-image: url("./../assets/home-4.jpeg");
     background-size: cover;
     height: 80vh;
-    @media (max-width: 1000px) {
+    @media (max-width: 1080px) {
         background-color: rgba(255, 255, 255, 0.6);
         background-blend-mode: lighten;
     }
     .shopContainer {
         display: flex;
-        padding: 80px 40px 20px 450px;
-        @media (max-width: 1000px) {
-            padding: 50px;
+        padding: 90px 30px 20px 480px;
+        @media (max-width: 1080px) {
+            padding: 20px;
             display: flex;
             flex-direction: column;
         }
@@ -121,6 +124,9 @@ h3 {
             @include flexBox(flex,
             flex-start);
             padding: 10px;
+            @media (max-width: 480px) {
+                padding: 5px;
+            }
             i {
                 border: solid 1px $textColor;
                 border-radius: 50%;
@@ -135,11 +141,11 @@ h3 {
             p {
                 text-align: left;
                 padding-bottom: 5px;
-                @media (max-width: 1000px) {
+                @media (max-width: 1080px) {
                     font-size: 0.6rem;
                 }
-                @media (max-width: 430px) {
-                    line-height: 1.2;
+                @media (max-width: 420px) {
+                    line-height: 1;
                 }
             }
         }
