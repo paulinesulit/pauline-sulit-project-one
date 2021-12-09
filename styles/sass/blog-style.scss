@@ -8,17 +8,10 @@
 header {
     background-image: url("./../assets/blog-1.jpeg");
     background-size: cover;
-    height: 65vh;
-}
-
-// sections general
-.wrapper {
-    padding-bottom: 50px;
-    h2 {
-        font-weight: bold;
-        font-size: 1.5rem;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgb(51, 51, 51, 0.2);
+    height: 80vh;
+    background-position: 50% 50%;
+    @media (max-width: 620px) {
+        height: 65vh;
     }
 }
 
@@ -26,10 +19,14 @@ header {
 .blogContainer {
     .blogTitle {
         margin-top: 70px;
-        h1,
+        h2,
         p {
             text-align: left;
-            padding: 10px 0;
+            padding: 8px 0;
+        }
+        h2 {
+            border: none;
+            font-size: 2rem;
         }
     }
     .blogInfoContainer {
@@ -38,6 +35,10 @@ header {
         padding: 30px 0;
         border-bottom: 1px solid rgb(51, 51, 51, 0.2);
         margin: 50px 0;
+        @media (max-width: 620px) {
+            @include flexBox(flex, flex-start);
+            flex-direction: column;
+        }
         .author {
             @include flexBox(flex,
             flex-start);
@@ -53,10 +54,27 @@ header {
             space-between);
             width: 50%;
             align-items: center;
+            @media (max-width: 620px) {
+                @include flexBox(flex, flex-start);
+                flex-direction: column;
+                width: 100%;
+                align-items: flex-start;
+                padding-top: 15px;
+            }
+            .container {
+                @media (max-width: 620px) {
+                    @include flexBox(flex, flex-start);
+                }
+            }
         }
         h3,
         p {
             text-align: left;
+        }
+        h3 {
+            @media (max-width: 620px) {
+                padding-right: 5px;
+            }
         }
     }
     .blogWriting {
@@ -85,9 +103,26 @@ header {
         @include flexBox(flex,
         space-between);
         padding: 50px 0;
-        p {
-            text-align: left;
-            padding-top: 20px;
+        @media (max-width: 480px) {
+            display: flex;
+            flex-direction: column;
+        }
+        li {
+            width: calc(100% / 3 - 10px);
+            @media (max-width: 480px) {
+                width: 100%;
+                img {
+                    margin: 0 auto;
+                }
+            }
+            p {
+                text-align: left;
+                padding-top: 20px;
+                @media (max-width: 480px) {
+                    text-align: center;
+                    padding: 10px 0 20px 0;
+                }
+            }
         }
     }
 }
@@ -102,6 +137,17 @@ header {
         .imageContainer {
             padding: 0 50px 50px 0;
             width: 10%;
+            @media (max-width: 1080px) {
+                padding: 0;
+            }
+            @media (max-width: 620px) {
+                width: 40%;
+            }
+            img {
+                @media (max-width: 1080px) {
+                    width: 100%;
+                }
+            }
         }
         .textComment {
             background: $secondary;
@@ -121,6 +167,9 @@ header {
                 border-bottom: 8px solid transparent;
                 left: 80px;
                 bottom: 95px;
+                @media (max-width: 1080px) {
+                    visibility: hidden;
+                }
             }
         }
     }
@@ -129,44 +178,68 @@ header {
 // fourth section
 .contactContainer {
     margin-bottom: 120px;
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        border: transparent;
-        border-bottom: 1px solid rgb(51, 51, 51, 0.2);
-    }
-    input[type="text"],
-    input[type="email"] {
-        width: calc(100% / 3 - 18px);
-        padding: 10px 10px 10px 0;
-        margin-top: 50px;
-        &:hover,
-        &:active,
-        &:focus {
-            outline: none;
-            border-bottom: 1px solid $textColor;
+    form {
+        @media (max-width: 620px) {
+            display: flex;
+            flex-direction: column;
         }
-    }
-    input[type="email"] {
-        margin: 0 20px;
-    }
-    textarea {
-        display: block;
-        width: 100%;
-        margin: 40px 0 50px 0;
-        &:hover,
-        &:active,
-        &:focus {
-            outline: none;
-            border-bottom: 1px solid $textColor;
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            border: transparent;
+            border-bottom: 1px solid rgb(51, 51, 51, 0.2);
         }
-    }
-    button {
-        border: transparent;
-        background: transparent;
-        padding-bottom: 5px;
-        font-family: $mainFont;
-        font-weight: 400;
-        border-bottom: 1px solid $textColor;
+        input[type="text"],
+        input[type="email"] {
+            width: calc(100% / 3 - 18px);
+            padding: 10px 10px 10px 0;
+            margin-top: 50px;
+            @media (max-width: 620px) {
+                width: calc(100% - 20px);
+                margin: 10px;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid $textColor;
+            }
+        }
+        input[type="email"] {
+            margin: 0 20px;
+            @media (max-width: 620px) {
+                margin: 0 10px;
+            }
+        }
+        textarea {
+            display: block;
+            width: 100%;
+            margin: 40px 0 50px 0;
+            &:hover,
+            &:active,
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid $textColor;
+            }
+            @media (max-width: 620px) {
+                width: calc(100% - 20px);
+                margin: 10px 10px 20px 10px;
+            }
+        }
+        button {
+            border: transparent;
+            background: transparent;
+            padding-bottom: 5px;
+            font-family: $mainFont;
+            font-weight: 400;
+            border-bottom: 1px solid $textColor;
+            &:hover {
+                font-weight: 700;
+            }
+            @media (max-width: 620px) {
+                width: calc(100% - 20px);
+                margin: 10px;
+            }
+        }
     }
 }

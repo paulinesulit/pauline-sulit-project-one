@@ -305,9 +305,11 @@ a {
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   letter-spacing: 1.8px;
-  font-weight: 400;
+  font-weight: 700;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
 }
 
 p,
@@ -356,6 +358,7 @@ img {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding-bottom: 50px;
 }
 
 ul {
@@ -438,13 +441,7 @@ h1 {
     position: absolute;
     margin-top: 120px;
     font-size: 3rem;
-    left: 90px;
-  }
-}
-@media (max-width: 550px) {
-  h1 {
-    margin-top: 140px;
-    left: 20px;
+    left: 70px;
   }
 }
 

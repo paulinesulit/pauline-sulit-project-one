@@ -305,9 +305,11 @@ a {
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   letter-spacing: 1.8px;
-  font-weight: 400;
+  font-weight: 700;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
 }
 
 p,
@@ -356,6 +358,7 @@ img {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding-bottom: 50px;
 }
 
 ul {
@@ -438,13 +441,7 @@ h1 {
     position: absolute;
     margin-top: 120px;
     font-size: 3rem;
-    left: 90px;
-  }
-}
-@media (max-width: 550px) {
-  h1 {
-    margin-top: 140px;
-    left: 20px;
+    left: 70px;
   }
 }
 
@@ -600,26 +597,26 @@ footer p {
 header {
   background-image: url("./../assets/blog-1.jpeg");
   background-size: cover;
-  height: 65vh;
+  height: 80vh;
+  background-position: 50% 50%;
 }
-
-.wrapper {
-  padding-bottom: 50px;
-}
-.wrapper h2 {
-  font-weight: bold;
-  font-size: 1.5rem;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+@media (max-width: 620px) {
+  header {
+    height: 65vh;
+  }
 }
 
 .blogContainer .blogTitle {
   margin-top: 70px;
 }
-.blogContainer .blogTitle h1,
+.blogContainer .blogTitle h2,
 .blogContainer .blogTitle p {
   text-align: left;
-  padding: 10px 0;
+  padding: 8px 0;
+}
+.blogContainer .blogTitle h2 {
+  border: none;
+  font-size: 2rem;
 }
 .blogContainer .blogInfoContainer {
   display: -webkit-box;
@@ -631,6 +628,20 @@ header {
   padding: 30px 0;
   border-bottom: 1px solid rgba(51, 51, 51, 0.2);
   margin: 50px 0;
+}
+@media (max-width: 620px) {
+  .blogContainer .blogInfoContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 .blogContainer .blogInfoContainer .author {
   display: -webkit-box;
@@ -660,9 +671,43 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 620px) {
+  .blogContainer .blogInfoContainer .blogInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 15px;
+  }
+}
+@media (max-width: 620px) {
+  .blogContainer .blogInfoContainer .blogInfo .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
 .blogContainer .blogInfoContainer h3,
 .blogContainer .blogInfoContainer p {
   text-align: left;
+}
+@media (max-width: 620px) {
+  .blogContainer .blogInfoContainer h3 {
+    padding-right: 5px;
+  }
 }
 .blogContainer .blogWriting p {
   text-align: left;
@@ -696,9 +741,37 @@ header {
           justify-content: space-between;
   padding: 50px 0;
 }
-.relatedPostsContainer ul p {
+@media (max-width: 480px) {
+  .relatedPostsContainer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.relatedPostsContainer ul li {
+  width: calc(100% / 3 - 10px);
+}
+@media (max-width: 480px) {
+  .relatedPostsContainer ul li {
+    width: 100%;
+  }
+  .relatedPostsContainer ul li img {
+    margin: 0 auto;
+  }
+}
+.relatedPostsContainer ul li p {
   text-align: left;
   padding-top: 20px;
+}
+@media (max-width: 480px) {
+  .relatedPostsContainer ul li p {
+    text-align: center;
+    padding: 10px 0 20px 0;
+  }
 }
 
 .commentsContainer .eachComment {
@@ -714,6 +787,21 @@ header {
 .commentsContainer .eachComment .imageContainer {
   padding: 0 50px 50px 0;
   width: 10%;
+}
+@media (max-width: 1080px) {
+  .commentsContainer .eachComment .imageContainer {
+    padding: 0;
+  }
+}
+@media (max-width: 620px) {
+  .commentsContainer .eachComment .imageContainer {
+    width: 40%;
+  }
+}
+@media (max-width: 1080px) {
+  .commentsContainer .eachComment .imageContainer img {
+    width: 100%;
+  }
 }
 .commentsContainer .eachComment .textComment {
   background: #F6F6F6;
@@ -735,46 +823,89 @@ header {
   left: 80px;
   bottom: 95px;
 }
+@media (max-width: 1080px) {
+  .commentsContainer .eachComment .textComment:after {
+    visibility: hidden;
+  }
+}
 
 .contactContainer {
   margin-bottom: 120px;
 }
-.contactContainer input[type=text],
-.contactContainer input[type=email],
-.contactContainer textarea {
+@media (max-width: 620px) {
+  .contactContainer form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.contactContainer form input[type=text],
+.contactContainer form input[type=email],
+.contactContainer form textarea {
   border: transparent;
   border-bottom: 1px solid rgba(51, 51, 51, 0.2);
 }
-.contactContainer input[type=text],
-.contactContainer input[type=email] {
+.contactContainer form input[type=text],
+.contactContainer form input[type=email] {
   width: calc(100% / 3 - 18px);
   padding: 10px 10px 10px 0;
   margin-top: 50px;
 }
-.contactContainer input[type=text]:hover, .contactContainer input[type=text]:active, .contactContainer input[type=text]:focus,
-.contactContainer input[type=email]:hover,
-.contactContainer input[type=email]:active,
-.contactContainer input[type=email]:focus {
+@media (max-width: 620px) {
+  .contactContainer form input[type=text],
+.contactContainer form input[type=email] {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+}
+.contactContainer form input[type=text]:hover, .contactContainer form input[type=text]:active, .contactContainer form input[type=text]:focus,
+.contactContainer form input[type=email]:hover,
+.contactContainer form input[type=email]:active,
+.contactContainer form input[type=email]:focus {
   outline: none;
   border-bottom: 1px solid #333;
 }
-.contactContainer input[type=email] {
+.contactContainer form input[type=email] {
   margin: 0 20px;
 }
-.contactContainer textarea {
+@media (max-width: 620px) {
+  .contactContainer form input[type=email] {
+    margin: 0 10px;
+  }
+}
+.contactContainer form textarea {
   display: block;
   width: 100%;
   margin: 40px 0 50px 0;
 }
-.contactContainer textarea:hover, .contactContainer textarea:active, .contactContainer textarea:focus {
+.contactContainer form textarea:hover, .contactContainer form textarea:active, .contactContainer form textarea:focus {
   outline: none;
   border-bottom: 1px solid #333;
 }
-.contactContainer button {
+@media (max-width: 620px) {
+  .contactContainer form textarea {
+    width: calc(100% - 20px);
+    margin: 10px 10px 20px 10px;
+  }
+}
+.contactContainer form button {
   border: transparent;
   background: transparent;
   padding-bottom: 5px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   border-bottom: 1px solid #333;
+}
+.contactContainer form button:hover {
+  font-weight: 700;
+}
+@media (max-width: 620px) {
+  .contactContainer form button {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
 }
