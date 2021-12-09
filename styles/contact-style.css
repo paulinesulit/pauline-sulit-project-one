@@ -304,14 +304,6 @@ a {
   color: #333;
 }
 
-h2 {
-  font-size: 1.5rem;
-  letter-spacing: 1.8px;
-  font-weight: 700;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
-}
-
 p,
 input[placeholder],
 textarea[placeholder] {
@@ -611,16 +603,32 @@ header .headerContainer h2 {
   letter-spacing: 0.9;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
-  padding-left: 170px;
   line-height: 1.15;
+  padding-left: 150px;
 }
-header .headerContainer h2 span {
-  border-top: 2px solid #333;
-  padding-top: 5px;
+@media (max-width: 970px) {
+  header .headerContainer h2 {
+    padding-left: 20px;
+  }
+}
+@media (max-width: 970px) {
+  header .headerContainer .headerImage img {
+    opacity: 0.2;
+  }
 }
 
 .contactContainer {
   padding: 100px 170px;
+}
+@media (max-width: 970px) {
+  .contactContainer {
+    padding: 100px 20px 20px 20px;
+  }
+}
+@media (max-width: 760px) {
+  .contactContainer {
+    padding-top: 150px;
+  }
 }
 .contactContainer h3 {
   font-weight: 700;
@@ -629,6 +637,12 @@ header .headerContainer h2 span {
 .contactContainer h3,
 .contactContainer p {
   text-align: left;
+}
+@media (max-width: 760px) {
+  .contactContainer h3,
+.contactContainer p {
+    text-align: center;
+  }
 }
 .contactContainer .contactInfo {
   display: -webkit-box;
@@ -639,66 +653,156 @@ header .headerContainer h2 span {
           justify-content: space-between;
   padding: 100px 0;
 }
+@media (max-width: 760px) {
+  .contactContainer .contactInfo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px 0;
+  }
+}
 .contactContainer .contactInfo div {
   padding: 40px;
+}
+@media (max-width: 760px) {
+  .contactContainer .contactInfo div {
+    padding: 20px 0;
+  }
 }
 .contactContainer .contactInfo div i {
   font-size: 1.7rem;
   padding-bottom: 20px;
 }
+@media (max-width: 760px) {
+  .contactContainer .contactInfo div i {
+    text-align: center;
+    display: block;
+  }
+}
 .contactContainer .contactInfo .address {
   border-left: 1px solid rgba(51, 51, 51, 0.2);
   border-right: 1px solid rgba(51, 51, 51, 0.2);
+}
+@media (max-width: 760px) {
+  .contactContainer .contactInfo .address {
+    border: none;
+  }
 }
 
 .contactForm {
   margin-bottom: 120px;
   padding: 0 170px;
 }
+@media (max-width: 970px) {
+  .contactForm {
+    padding: 50px;
+  }
+}
+@media (max-width: 760px) {
+  .contactForm {
+    padding: 0;
+  }
+}
 .contactForm h3 {
   font-weight: 700;
   padding-bottom: 15px;
+}
+@media (max-width: 760px) {
+  .contactForm p {
+    padding-bottom: 20px;
+  }
 }
 .contactForm h3,
 .contactForm p {
   text-align: left;
 }
-.contactForm input[type=text],
-.contactForm input[type=email],
-.contactForm textarea {
+@media (max-width: 760px) {
+  .contactForm h3,
+.contactForm p {
+    margin: 0 10px;
+  }
+}
+@media (max-width: 760px) {
+  .contactForm form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.contactForm form input[type=text],
+.contactForm form input[type=email],
+.contactForm form textarea {
   border: transparent;
   border-bottom: 1px solid rgba(51, 51, 51, 0.2);
 }
-.contactForm input[type=text],
-.contactForm input[type=email] {
+.contactForm form input[type=text],
+.contactForm form input[type=email] {
   width: calc(100% / 3 - 18px);
   padding: 10px 10px 10px 0;
   margin-top: 70px;
 }
-.contactForm input[type=text]:hover, .contactForm input[type=text]:active, .contactForm input[type=text]:focus,
-.contactForm input[type=email]:hover,
-.contactForm input[type=email]:active,
-.contactForm input[type=email]:focus {
+@media (max-width: 760px) {
+  .contactForm form input[type=text],
+.contactForm form input[type=email] {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+}
+.contactForm form input[type=text]:hover, .contactForm form input[type=text]:active, .contactForm form input[type=text]:focus,
+.contactForm form input[type=email]:hover,
+.contactForm form input[type=email]:active,
+.contactForm form input[type=email]:focus {
   outline: none;
   border-bottom: 1px solid #333;
 }
-.contactForm input[type=email] {
+.contactForm form input[type=email] {
   margin: 0 20px;
 }
-.contactForm textarea {
+@media (max-width: 760px) {
+  .contactForm form input[type=email] {
+    margin: 0 10px;
+  }
+}
+.contactForm form textarea {
   display: block;
   width: 100%;
   margin: 40px 0 50px 0;
 }
-.contactForm textarea:hover, .contactForm textarea:active, .contactForm textarea:focus {
+.contactForm form textarea:hover, .contactForm form textarea:active, .contactForm form textarea:focus {
   outline: none;
   border-bottom: 1px solid #333;
 }
-.contactForm button {
+@media (max-width: 760px) {
+  .contactForm form textarea {
+    width: calc(100% - 20px);
+    margin: 10px 10px 20px 10px;
+  }
+}
+.contactForm form button {
   border: transparent;
   background: transparent;
   padding-bottom: 5px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   border-bottom: 1px solid #333;
+}
+.contactForm form button:hover {
+  font-weight: 700;
+}
+@media (max-width: 760px) {
+  .contactForm form button {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
 }

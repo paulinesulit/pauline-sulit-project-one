@@ -16,11 +16,15 @@ header {
             @include position(absolute, 180px, 0);
             @include myFont(2rem, 0.9, 700);
             font-family: $mainFont;
-            padding-left: 170px;
             line-height: 1.15;
-            span {
-                border-top: 2px solid $textColor;
-                padding-top: 5px;
+            padding-left: 150px;
+            @media (max-width: 970px) {
+                padding-left: 20px;
+            }
+        }
+        .headerImage img {
+            @media (max-width: 970px) {
+                opacity: 0.2;
             }
         }
     }
@@ -29,6 +33,12 @@ header {
 // first section
 .contactContainer {
     padding: 100px 170px;
+    @media (max-width: 970px) {
+        padding: 100px 20px 20px 20px;
+    }
+    @media (max-width: 760px) {
+        padding-top: 150px;
+    }
     h3 {
         font-weight: 700;
         padding-bottom: 20px;
@@ -36,20 +46,38 @@ header {
     h3,
     p {
         text-align: left;
+        @media (max-width: 760px) {
+            text-align: center;
+        }
     }
     .contactInfo {
         @include flexBox(flex, space-between);
         padding: 100px 0;
+        @media (max-width: 760px) {
+            @include flexBox(flex, center);
+            flex-direction: column;
+            padding: 20px 0;
+        }
         div {
             padding: 40px;
+            @media (max-width: 760px) {
+                padding: 20px 0;
+            }
             i {
                 font-size: 1.7rem;
                 padding-bottom: 20px;
+                @media (max-width: 760px) {
+                    text-align: center;
+                    display: block;
+                }
             }
         }
         .address {
             border-left: 1px solid rgb(51, 51, 51, 0.2);
             border-right: 1px solid rgb(51, 51, 51, 0.2);
+            @media (max-width: 760px) {
+                border: none;
+            }
         }
     }
 }
@@ -58,52 +86,90 @@ header {
 .contactForm {
     margin-bottom: 120px;
     padding: 0 170px;
+    @media (max-width: 970px) {
+        padding: 50px;
+    }
+    @media (max-width: 760px) {
+        padding: 0;
+    }
     h3 {
         font-weight: 700;
         padding-bottom: 15px;
     }
+    p {
+        @media (max-width: 760px) {
+            padding-bottom: 20px;
+        }
+    }
     h3,
     p {
         text-align: left;
-    }
-    input[type="text"],
-    input[type="email"],
-    textarea {
-        border: transparent;
-        border-bottom: 1px solid rgb(51, 51, 51, 0.2);
-    }
-    input[type="text"],
-    input[type="email"] {
-        width: calc(100% / 3 - 18px);
-        padding: 10px 10px 10px 0;
-        margin-top: 70px;
-        &:hover,
-        &:active,
-        &:focus {
-            outline: none;
-            border-bottom: 1px solid $textColor;
+        @media (max-width: 760px) {
+            margin: 0 10px;
         }
     }
-    input[type="email"] {
-        margin: 0 20px;
-    }
-    textarea {
-        display: block;
-        width: 100%;
-        margin: 40px 0 50px 0;
-        &:hover,
-        &:active,
-        &:focus {
-            outline: none;
-            border-bottom: 1px solid $textColor;
+    form {
+        @media (max-width: 760px) {
+            display: flex;
+            flex-direction: column;
         }
-    }
-    button {
-        border: transparent;
-        background: transparent;
-        padding-bottom: 5px;
-        font-family: $mainFont;
-        font-weight: 400;
-        border-bottom: 1px solid $textColor;
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            border: transparent;
+            border-bottom: 1px solid rgb(51, 51, 51, 0.2);
+        }
+        input[type="text"],
+        input[type="email"] {
+            width: calc(100% / 3 - 18px);
+            padding: 10px 10px 10px 0;
+            margin-top: 70px;
+            @media (max-width: 760px) {
+                width: calc(100% - 20px);
+                margin: 10px;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid $textColor;
+            }
+        }
+        input[type="email"] {
+            margin: 0 20px;
+            @media (max-width: 760px) {
+                margin: 0 10px;
+            }
+        }
+        textarea {
+            display: block;
+            width: 100%;
+            margin: 40px 0 50px 0;
+            &:hover,
+            &:active,
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid $textColor;
+            }
+            @media (max-width: 760px) {
+                width: calc(100% - 20px);
+                margin: 10px 10px 20px 10px;
+            }
+        }
+        button {
+            border: transparent;
+            background: transparent;
+            padding-bottom: 5px;
+            font-family: $mainFont;
+            font-weight: 400;
+            border-bottom: 1px solid $textColor;
+            &:hover {
+                font-weight: 700;
+            }
+            @media (max-width: 760px) {
+                width: calc(100% - 20px);
+                margin: 10px;
+            }
+        }
     }
 }
