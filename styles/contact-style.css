@@ -611,6 +611,13 @@ header .headerContainer h2 {
     padding-left: 20px;
   }
 }
+header .headerContainer h2::before {
+  content: "";
+  border-top: 2px solid black;
+  width: 25px;
+  top: -10px;
+  position: absolute;
+}
 @media (max-width: 970px) {
   header .headerContainer .headerImage img {
     opacity: 0.2;
@@ -618,7 +625,7 @@ header .headerContainer h2 {
 }
 
 .contactContainer {
-  padding: 100px 170px;
+  padding: 50px 150px;
 }
 @media (max-width: 970px) {
   .contactContainer {
@@ -651,7 +658,7 @@ header .headerContainer h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 100px 0;
+  padding: 50px 0;
 }
 @media (max-width: 760px) {
   .contactContainer .contactInfo {

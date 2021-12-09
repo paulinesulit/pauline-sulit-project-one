@@ -21,6 +21,13 @@ header {
             @media (max-width: 970px) {
                 padding-left: 20px;
             }
+            &::before {
+                content: "";
+                border-top: 2px solid black;
+                width: 25px;
+                top: -10px;
+                position: absolute;
+            }
         }
         .headerImage img {
             @media (max-width: 970px) {
@@ -32,7 +39,7 @@ header {
 
 // first section
 .contactContainer {
-    padding: 100px 170px;
+    padding: 50px 150px;
     @media (max-width: 970px) {
         padding: 100px 20px 20px 20px;
     }
@@ -52,7 +59,7 @@ header {
     }
     .contactInfo {
         @include flexBox(flex, space-between);
-        padding: 100px 0;
+        padding: 50px 0;
         @media (max-width: 760px) {
             @include flexBox(flex, center);
             flex-direction: column;
