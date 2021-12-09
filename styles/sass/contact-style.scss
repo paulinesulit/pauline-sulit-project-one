@@ -18,8 +18,8 @@ header {
             font-family: $mainFont;
             line-height: 1.15;
             padding-left: 150px;
-            @media (max-width: 970px) {
-                padding-left: 20px;
+            @media (max-width: 920px) {
+                padding-left: 50px;
             }
             &::before {
                 content: "";
@@ -30,8 +30,8 @@ header {
             }
         }
         .headerImage img {
-            @media (max-width: 970px) {
-                opacity: 0.2;
+            @media (max-width: 760px) {
+                opacity: 0.8;
             }
         }
     }
@@ -40,11 +40,8 @@ header {
 // first section
 .contactContainer {
     padding: 50px 150px;
-    @media (max-width: 970px) {
-        padding: 100px 20px 20px 20px;
-    }
-    @media (max-width: 760px) {
-        padding-top: 150px;
+    @media (max-width: 920px) {
+        padding: 50px;
     }
     h3 {
         font-weight: 700;

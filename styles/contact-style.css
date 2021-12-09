@@ -626,9 +626,9 @@ header .headerContainer h2 {
   line-height: 1.15;
   padding-left: 150px;
 }
-@media (max-width: 970px) {
+@media (max-width: 920px) {
   header .headerContainer h2 {
-    padding-left: 20px;
+    padding-left: 50px;
   }
 }
 header .headerContainer h2::before {
@@ -638,23 +638,18 @@ header .headerContainer h2::before {
   top: -10px;
   position: absolute;
 }
-@media (max-width: 970px) {
+@media (max-width: 760px) {
   header .headerContainer .headerImage img {
-    opacity: 0.2;
+    opacity: 0.8;
   }
 }
 
 .contactContainer {
   padding: 50px 150px;
 }
-@media (max-width: 970px) {
+@media (max-width: 920px) {
   .contactContainer {
-    padding: 100px 20px 20px 20px;
-  }
-}
-@media (max-width: 760px) {
-  .contactContainer {
-    padding-top: 150px;
+    padding: 50px;
   }
 }
 .contactContainer h3 {

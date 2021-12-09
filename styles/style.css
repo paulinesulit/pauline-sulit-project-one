@@ -701,7 +701,7 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (max-width: 600px) {
+@media (max-width: 740px) {
   .imageScrollContainer {
     padding: 20px;
   }
@@ -720,7 +720,7 @@ h3 {
   padding-left: 100px;
   padding-right: 100px;
 }
-@media (max-width: 600px) {
+@media (max-width: 740px) {
   .imageScrollContainer .imageAndText {
     padding: 10px;
   }
