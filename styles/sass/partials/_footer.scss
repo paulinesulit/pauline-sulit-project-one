@@ -94,6 +94,9 @@ footer {
                 background: $primary;
                 position: absolute;
                 bottom: 0;
+                &:hover {
+                    opacity: 0.9;
+                }
                 @media (max-width: 460px) {
                     width: 10%
                 }

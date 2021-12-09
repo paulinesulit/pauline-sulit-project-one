@@ -594,6 +594,9 @@ footer .footerInfo form button {
   position: absolute;
   bottom: 0;
 }
+footer .footerInfo form button:hover {
+  opacity: 0.9;
+}
 @media (max-width: 460px) {
   footer .footerInfo form button {
     width: 10%;
