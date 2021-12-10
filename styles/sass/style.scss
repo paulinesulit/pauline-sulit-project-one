@@ -35,10 +35,15 @@ h3 {
             @include position(absolute,
             15%,
             21%);
+            @media (max-width: 750px) {
+                width: 30%;
+                top: 12%;
+                left: 15%
+            }
             @media (max-width: 600px) {
                 width: 30%;
-                top: 5%;
-                right: 10%;
+                top: 7%;
+                left: 10%;
             }
         }
         .brandingText {
@@ -252,6 +257,9 @@ h3 {
             align-items: center;
             @media (max-width: 970px) {
                 padding: 10px;
+            }
+            @media (max-width: 680px) {
+                padding: 30px;
             }
             p {
                 padding: 40px;

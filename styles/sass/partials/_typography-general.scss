@@ -1,12 +1,5 @@
 @import "variables";
 @import "mixin";
-// removes white space on mobile
-html,
-body {
-    width: 100%;
-    overflow-x: hidden;
-}
-
 html {
     @include myFont(125%, 0.3px, 400);
     font-family: $mainFont;
