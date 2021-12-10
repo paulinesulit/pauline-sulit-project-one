@@ -403,7 +403,7 @@ header {
 }
 @media (max-width: 970px) {
   .headerNav ul li {
-    visibility: hidden;
+    display: none;
   }
 }
 .headerNav ul li a {
@@ -452,11 +452,10 @@ nav .fa-bars {
   top: 10px;
   right: 10px;
   font-size: 1.8rem;
-  visibility: hidden;
 }
-@media (max-width: 970px) {
+@media (min-width: 970px) {
   nav .fa-bars {
-    visibility: visible;
+    display: none;
     top: 10px;
   }
 }

@@ -22,7 +22,7 @@ header {
                 padding: 10px;
             }
             @media (max-width: 970px) {
-                visibility: hidden;
+                display: none;
             }
             a {
                 text-decoration: none;
@@ -74,9 +74,8 @@ nav {
         top: 10px;
         right: 10px;
         font-size: 1.8rem;
-        visibility: hidden;
-        @media (max-width: 970px) {
-            visibility: visible;
+        @media (min-width: 970px) {
+            display: none;
             top: 10px;
         }
     }
