@@ -379,6 +379,11 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (max-width: 860px) {
+  .headerNav {
+    padding: 0;
+  }
+}
 .headerNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -614,12 +619,14 @@ header {
 header .headerContainer {
   position: relative;
 }
-header .headerContainer .headerNav {
-  padding: 0 150px;
+@media (max-width: 860px) {
+  header .headerContainer h1 {
+    padding: 20px 0;
+  }
 }
 header .headerContainer h2 {
   position: absolute;
-  top: 180px;
+  top: 60%;
   left: 0;
   font-size: 2rem;
   letter-spacing: 0.9;
@@ -631,6 +638,7 @@ header .headerContainer h2 {
 @media (max-width: 920px) {
   header .headerContainer h2 {
     padding-left: 50px;
+    top: 70%;
   }
 }
 header .headerContainer h2::before {
@@ -639,6 +647,11 @@ header .headerContainer h2::before {
   width: 25px;
   top: -10px;
   position: absolute;
+}
+@media (max-width: 760px) {
+  header .headerContainer h2::before {
+    visibility: hidden;
+  }
 }
 @media (max-width: 760px) {
   header .headerContainer .headerImage img {
@@ -750,7 +763,7 @@ header .headerContainer h2::before {
 @media (max-width: 760px) {
   .contactForm h3,
 .contactForm p {
-    margin: 0 10px;
+    margin: 0 20px;
   }
 }
 @media (max-width: 760px) {
@@ -781,6 +794,7 @@ header .headerContainer h2::before {
 .contactForm form input[type=email] {
     width: calc(100% - 20px);
     margin: 10px;
+    padding: 10px;
   }
 }
 .contactForm form input[type=text]:hover, .contactForm form input[type=text]:active, .contactForm form input[type=text]:focus,
@@ -810,7 +824,8 @@ header .headerContainer h2::before {
 @media (max-width: 760px) {
   .contactForm form textarea {
     width: calc(100% - 20px);
-    margin: 10px 10px 20px 10px;
+    margin: 10px;
+    padding: 10px;
   }
 }
 .contactForm form button {

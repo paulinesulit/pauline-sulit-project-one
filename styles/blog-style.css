@@ -379,6 +379,11 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (max-width: 860px) {
+  .headerNav {
+    padding: 0;
+  }
+}
 .headerNav ul {
   display: -webkit-box;
   display: -ms-flexbox;
