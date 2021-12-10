@@ -11,6 +11,9 @@ footer {
             display: flex;
             flex-direction: column;
         }
+        .posts ul {
+            list-style-type: disc;
+        }
         div {
             padding: 40px;
             @media (max-width: 960px) {
@@ -39,9 +42,6 @@ footer {
                     margin: 0 auto;
                 }
             }
-        }
-        .posts li {
-            list-style-type: disc;
         }
         li {
             @include myFont(0.7rem, 0.3px, 400);

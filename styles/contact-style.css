@@ -489,6 +489,9 @@ footer .footerInfo {
             flex-direction: column;
   }
 }
+footer .footerInfo .posts ul {
+  list-style-type: disc;
+}
 footer .footerInfo div {
   padding: 40px;
 }
@@ -530,9 +533,6 @@ footer .footerInfo .socialIcons ul {
     width: 25%;
     margin: 0 auto;
   }
-}
-footer .footerInfo .posts li {
-  list-style-type: disc;
 }
 footer .footerInfo li {
   font-size: 0.7rem;
