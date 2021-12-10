@@ -14,7 +14,7 @@ footer {
         div {
             padding: 40px;
             @media (max-width: 960px) {
-                padding: 20px;
+                padding: 30px 0;
             }
             &:first-of-type h3 {
                 text-align: left;
@@ -35,7 +35,7 @@ footer {
                 @include flexBox(flex, space-between);
                 width: 30%;
                 @media (max-width: 960px) {
-                    width: 15%;
+                    width: 25%;
                     margin: 0 auto;
                 }
             }
@@ -98,7 +98,7 @@ footer {
                     opacity: 0.9;
                 }
                 @media (max-width: 460px) {
-                    width: 10%
+                    width: 10%;
                 }
             }
         }

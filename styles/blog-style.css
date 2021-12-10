@@ -337,7 +337,6 @@ button {
 }
 
 body {
-  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -491,7 +490,7 @@ footer .footerInfo div {
 }
 @media (max-width: 960px) {
   footer .footerInfo div {
-    padding: 20px;
+    padding: 30px 0;
   }
 }
 footer .footerInfo div:first-of-type h3 {
@@ -524,7 +523,7 @@ footer .footerInfo .socialIcons ul {
 }
 @media (max-width: 960px) {
   footer .footerInfo .socialIcons ul {
-    width: 15%;
+    width: 25%;
     margin: 0 auto;
   }
 }
@@ -609,6 +608,17 @@ footer p {
   letter-spacing: 5px;
 }
 
+.wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (max-width: 860px) {
+  h1 {
+    padding: 20px 0;
+  }
+}
+
 h2 {
   font-size: 1.5rem;
   letter-spacing: 1.8px;
@@ -623,9 +633,19 @@ header {
   height: 80vh;
   background-position: 50% 50%;
 }
-@media (max-width: 620px) {
+@media (max-width: 960px) {
   header {
     height: 65vh;
+  }
+}
+@media (max-width: 860px) {
+  header {
+    height: 50vh;
+  }
+}
+@media (max-width: 860px) {
+  header {
+    height: 40vh;
   }
 }
 
@@ -875,14 +895,14 @@ header {
 .contactContainer form input[type=text],
 .contactContainer form input[type=email] {
   width: calc(100% / 3 - 18px);
-  padding: 10px 10px 10px 0;
+  padding: 10px;
   margin-top: 50px;
 }
 @media (max-width: 620px) {
   .contactContainer form input[type=text],
 .contactContainer form input[type=email] {
-    width: calc(100% - 20px);
-    margin: 10px;
+    width: 100%;
+    margin: 10px 0;
   }
 }
 .contactContainer form input[type=text]:hover, .contactContainer form input[type=text]:active, .contactContainer form input[type=text]:focus,
@@ -897,7 +917,7 @@ header {
 }
 @media (max-width: 620px) {
   .contactContainer form input[type=email] {
-    margin: 0 10px;
+    margin: 0;
   }
 }
 .contactContainer form textarea {
@@ -911,8 +931,9 @@ header {
 }
 @media (max-width: 620px) {
   .contactContainer form textarea {
-    width: calc(100% - 20px);
-    margin: 10px 10px 20px 10px;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
   }
 }
 .contactContainer form button {
@@ -928,7 +949,7 @@ header {
 }
 @media (max-width: 620px) {
   .contactContainer form button {
-    width: calc(100% - 20px);
-    margin: 10px;
+    width: 100%;
+    margin: 20px 0;
   }
 }

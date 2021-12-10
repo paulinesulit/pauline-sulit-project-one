@@ -4,6 +4,18 @@
 @import "partials/nav";
 @import "partials/footer";
 @import "partials/mixin";
+// general
+.wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h1 {
+    @media (max-width: 860px) {
+        padding: 20px 0;
+    }
+}
+
 // blog headings
 h2 {
     @include myFont(1.5rem, 1.8px, 700);
@@ -17,8 +29,14 @@ header {
     background-size: cover;
     height: 80vh;
     background-position: 50% 50%;
-    @media (max-width: 620px) {
+    @media (max-width: 960px) {
         height: 65vh;
+    }
+    @media (max-width: 860px) {
+        height: 50vh;
+    }
+    @media (max-width: 860px) {
+        height: 40vh;
     }
 }
 
@@ -199,11 +217,11 @@ header {
         input[type="text"],
         input[type="email"] {
             width: calc(100% / 3 - 18px);
-            padding: 10px 10px 10px 0;
+            padding: 10px;
             margin-top: 50px;
             @media (max-width: 620px) {
-                width: calc(100% - 20px);
-                margin: 10px;
+                width: 100%;
+                margin: 10px 0;
             }
             &:hover,
             &:active,
@@ -215,7 +233,7 @@ header {
         input[type="email"] {
             margin: 0 20px;
             @media (max-width: 620px) {
-                margin: 0 10px;
+                margin: 0;
             }
         }
         textarea {
@@ -229,8 +247,9 @@ header {
                 border-bottom: 1px solid $textColor;
             }
             @media (max-width: 620px) {
-                width: calc(100% - 20px);
-                margin: 10px 10px 20px 10px;
+                width: 100%;
+                margin: 0;
+                padding: 10px;
             }
         }
         button {
@@ -244,8 +263,8 @@ header {
                 font-weight: 700;
             }
             @media (max-width: 620px) {
-                width: calc(100% - 20px);
-                margin: 10px;
+                width: 100%;
+                margin: 20px 0;
             }
         }
     }
