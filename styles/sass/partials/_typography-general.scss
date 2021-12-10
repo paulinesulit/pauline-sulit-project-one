@@ -1,5 +1,15 @@
 @import "variables";
 @import "mixin";
+// removes white space
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
 html {
     @include myFont(125%, 0.3px, 400);
     font-family: $mainFont;
