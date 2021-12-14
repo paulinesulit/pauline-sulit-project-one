@@ -489,8 +489,14 @@ footer .footerInfo {
             flex-direction: column;
   }
 }
-footer .footerInfo .posts ul {
-  list-style-type: disc;
+footer .footerInfo .posts li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #F6F6F6;
+  display: inline-block;
+  margin: 3px 5px 3px 3px;
 }
 footer .footerInfo div {
   padding: 40px;
