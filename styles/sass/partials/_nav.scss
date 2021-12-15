@@ -74,9 +74,28 @@ nav {
         top: 10px;
         right: 10px;
         font-size: 1.8rem;
+        z-index: 10;
         @media (min-width: 970px) {
             display: none;
             top: 10px;
+        }
+    }
+    .dropDown {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        li {
+            display: none;
+            @media (max-width: 970px) {
+                display: block;
+                padding-right: 50px;
+                background-color: rgb(246, 246, 246, 0.9);
+            }
+        }
+        li:first-of-type {
+            @media (max-width: 970px) {
+                margin-top: 50px;
+            }
         }
     }
 }

@@ -5,7 +5,8 @@
 @import "partials/footer";
 @import "partials/mixin";
 // general
-.wrapper {
+main,
+footer {
     padding-left: 20px;
     padding-right: 20px;
 }

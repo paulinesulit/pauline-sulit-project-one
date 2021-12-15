@@ -23,6 +23,7 @@ textarea[placeholder] {
     text-align: center;
     line-height: 24px;
     font-family: $bodyFont;
+    z-index: 10;
 }
 
 input[placeholder],
@@ -40,6 +41,7 @@ button {
     @include myFont(0.7rem, 0.7px, 700);
     text-align: center;
     line-height: 24px;
+    z-index: 10;
 }
 
 // general
