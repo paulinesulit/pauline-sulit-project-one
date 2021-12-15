@@ -443,12 +443,17 @@ header {
     position: absolute;
     right: 0;
     top: 40px;
-    padding-right: 60px;
+    padding-right: 100px;
     background-color: #F6F6F6;
   }
 }
 .headerNav .leftNav li:first-of-type a {
   text-decoration: line-through;
+}
+@media (max-width: 970px) {
+  .headerNav .leftNav li:first-of-type a {
+    text-decoration: none;
+  }
 }
 .headerNav .rightNav {
   z-index: 10;
@@ -468,7 +473,7 @@ header {
     position: absolute;
     right: 0;
     top: 169px;
-    padding-right: 77px;
+    padding-right: 117px;
     background-color: #F6F6F6;
   }
 }
@@ -500,34 +505,6 @@ h1 {
   .fa-bars {
     display: block;
     top: 10px;
-  }
-}
-
-.dropDown {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-.dropDown li {
-  display: none;
-}
-@media (max-width: 970px) {
-  .dropDown li {
-    display: block;
-    padding-right: 50px;
-    background-color: rgba(246, 246, 246, 0.9);
-  }
-}
-@media (max-width: 970px) {
-  .dropDown li:first-of-type {
-    margin-top: 50px;
   }
 }
 

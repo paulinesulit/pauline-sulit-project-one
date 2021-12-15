@@ -55,13 +55,16 @@ header {
                 position: absolute;
                 right: 0;
                 top: 40px;
-                padding-right: 60px;
+                padding-right: 100px;
                 background-color: $secondary;
             }
         }
         li:first-of-type {
             a {
                 text-decoration: line-through;
+                @media (max-width: 970px) {
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -75,7 +78,7 @@ header {
                 position: absolute;
                 right: 0;
                 top: 169px;
-                padding-right: 77px;
+                padding-right: 117px;
                 background-color: $secondary;
             }
         }
@@ -103,24 +106,5 @@ h1 {
     @media (max-width: 970px) {
         display: block;
         top: 10px;
-    }
-}
-
-.dropDown {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    li {
-        display: none;
-        @media (max-width: 970px) {
-            display: block;
-            padding-right: 50px;
-            background-color: rgb(246, 246, 246, 0.9);
-        }
-    }
-    li:first-of-type {
-        @media (max-width: 970px) {
-            margin-top: 50px;
-        }
     }
 }
