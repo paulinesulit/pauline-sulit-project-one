@@ -313,7 +313,7 @@ textarea[placeholder] {
   text-align: center;
   line-height: 24px;
   font-family: "Open Sans", sans-serif;
-  z-index: 10;
+  z-index: 1;
 }
 
 input[placeholder],
@@ -403,11 +403,6 @@ header {
     padding: 10px;
   }
 }
-@media (max-width: 970px) {
-  .headerNav ul li {
-    display: none;
-  }
-}
 .headerNav ul li a {
   text-decoration: none;
   position: relative;
@@ -430,8 +425,52 @@ header {
   left: 50%;
   padding: 4px 5px;
 }
+.headerNav .leftNav {
+  z-index: 10;
+}
+@media (max-width: 970px) {
+  .headerNav .leftNav {
+    display: none;
+  }
+  .headerNav .leftNav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    padding-right: 60px;
+    background-color: #F6F6F6;
+  }
+}
 .headerNav .leftNav li:first-of-type a {
   text-decoration: line-through;
+}
+.headerNav .rightNav {
+  z-index: 10;
+}
+@media (max-width: 970px) {
+  .headerNav .rightNav {
+    display: none;
+  }
+  .headerNav .rightNav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 169px;
+    padding-right: 77px;
+    background-color: #F6F6F6;
+  }
 }
 
 h1 {
@@ -449,22 +488,22 @@ h1 {
   }
 }
 
-nav .fa-bars,
-nav .fa-times {
+.fa-bars {
   position: absolute;
   top: 10px;
   right: 10px;
   font-size: 1.8rem;
   z-index: 10;
+  display: none;
 }
-@media (min-width: 970px) {
-  nav .fa-bars,
-nav .fa-times {
-    display: none;
+@media (max-width: 970px) {
+  .fa-bars {
+    display: block;
     top: 10px;
   }
 }
-nav .dropDown {
+
+.dropDown {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,23 +515,20 @@ nav .dropDown {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-nav .dropDown li {
+.dropDown li {
   display: none;
 }
 @media (max-width: 970px) {
-  nav .dropDown li {
+  .dropDown li {
     display: block;
     padding-right: 50px;
     background-color: rgba(246, 246, 246, 0.9);
   }
 }
 @media (max-width: 970px) {
-  nav .dropDown li:first-of-type {
+  .dropDown li:first-of-type {
     margin-top: 50px;
   }
-}
-nav .hideMenu {
-  display: none;
 }
 
 footer {

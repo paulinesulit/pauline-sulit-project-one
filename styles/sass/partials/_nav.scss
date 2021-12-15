@@ -21,9 +21,6 @@ header {
             @media (max-width: 1080px) {
                 padding: 10px;
             }
-            @media (max-width: 970px) {
-                display: none;
-            }
             a {
                 text-decoration: none;
                 position: relative;
@@ -49,9 +46,37 @@ header {
         }
     }
     .leftNav {
+        z-index: 10;
+        @media (max-width: 970px) {
+            display: none;
+            ul {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                right: 0;
+                top: 40px;
+                padding-right: 60px;
+                background-color: $secondary;
+            }
+        }
         li:first-of-type {
             a {
                 text-decoration: line-through;
+            }
+        }
+    }
+    .rightNav {
+        z-index: 10;
+        @media (max-width: 970px) {
+            display: none;
+            ul {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                right: 0;
+                top: 169px;
+                padding-right: 77px;
+                background-color: $secondary;
             }
         }
     }
@@ -68,38 +93,34 @@ h1 {
     }
 }
 
-nav {
-    .fa-bars,
-    .fa-times {
-        position: absolute;
+.fa-bars {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.8rem;
+    z-index: 10;
+    display: none;
+    @media (max-width: 970px) {
+        display: block;
         top: 10px;
-        right: 10px;
-        font-size: 1.8rem;
-        z-index: 10;
-        @media (min-width: 970px) {
-            display: none;
-            top: 10px;
-        }
     }
-    .dropDown {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        li {
-            display: none;
-            @media (max-width: 970px) {
-                display: block;
-                padding-right: 50px;
-                background-color: rgb(246, 246, 246, 0.9);
-            }
-        }
-        li:first-of-type {
-            @media (max-width: 970px) {
-                margin-top: 50px;
-            }
-        }
-    }
-    .hideMenu {
+}
+
+.dropDown {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    li {
         display: none;
+        @media (max-width: 970px) {
+            display: block;
+            padding-right: 50px;
+            background-color: rgb(246, 246, 246, 0.9);
+        }
+    }
+    li:first-of-type {
+        @media (max-width: 970px) {
+            margin-top: 50px;
+        }
     }
 }
