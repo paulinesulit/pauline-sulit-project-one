@@ -69,7 +69,8 @@ h1 {
 }
 
 nav {
-    .fa-bars {
+    .fa-bars,
+    .fa-times {
         position: absolute;
         top: 10px;
         right: 10px;
@@ -97,5 +98,8 @@ nav {
                 margin-top: 50px;
             }
         }
+    }
+    .hideMenu {
+        display: none;
     }
 }

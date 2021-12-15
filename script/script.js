@@ -7,6 +7,7 @@
 const hamburgerMenu = document.querySelector(".fa-bars");
 
 hamburgerMenu.addEventListener('click', function(event) {
+
     const dropDownMenu = document.querySelector(".dropDown");
     dropDownMenu.innerHTML = `<li><a href="index.html">HOME</a></li>
                         <li><a href="blog.html">BLOG</a></li>
@@ -23,5 +24,15 @@ hamburgerMenu.addEventListener('click', function(event) {
                         <li>
                             <a href="#"><i class="fas fa-shopping-bag"></i></a>
                         </li>`;
+    if (event.target.tagName === "I") {
+        menuBar(event.target);
+    }
+
+    function menuBar(e) {
+        console.log(e);
+        e.classList.toggle("fa-bars");
+        e.classList.toggle("fa-times");
+
+    }
 
 });
