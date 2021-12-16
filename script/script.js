@@ -18,12 +18,15 @@ hamburgerMenu.addEventListener('click', function(event) {
         leftNavBar.style.display = "block";
         rightNavBar.style.display = "block";
     };
+
 });
 
 window.addEventListener("resize", function(e) {
     if (window.innerWidth >= 970) {
-        leftNavBar.removeAttribute("display");
-        rightNavBar.removeAttribute("display");
-        console.log(window.innerWidth);
+        leftNavBar.style.display = "block";
+        rightNavBar.style.display = "block";
+    } else {
+        leftNavBar.style.display = "none";
+        rightNavBar.style.display = "none";
     }
 });
