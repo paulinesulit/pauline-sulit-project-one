@@ -19,3 +19,11 @@ hamburgerMenu.addEventListener('click', function(event) {
         rightNavBar.style.display = "block";
     };
 });
+
+window.addEventListener("resize", function(e) {
+    if (window.innerWidth >= 970) {
+        leftNavBar.removeAttribute("display");
+        rightNavBar.removeAttribute("display");
+        console.log(window.innerWidth);
+    }
+});
